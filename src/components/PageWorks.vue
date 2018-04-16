@@ -25,7 +25,7 @@
   section.sectionHero
     .container
       .row
-        workbox.col-sm-4(v-for="w in works", :work="w")
+        workbox.col-md-4.col-sm-12.wow.fadeIn(v-for="w in works", :work="w")
 
 </template>
 

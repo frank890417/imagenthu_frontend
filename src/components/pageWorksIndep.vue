@@ -4,17 +4,20 @@
     .container
       .row
         .col-sm-12
-          router-link(to="/works") 
-            i.fa.fa-angle-left
-            span  返回
       .row
         .col-sm-12
           .cover(:style="cssbg(work.cover)")
+
+            router-link.btn-back(to="/works") 
+              i.fa.fa-angle-left
+              span  返回
       .row
         .col-sm-5
           br
           br
-          h2 {{work.title}}
+          h2
+            SvgInline.logo(:src="work.logo")
+            span {{work.title}}
             span.sponsor(v-if="work.sponsor") {{work.sponsor}}
           hr
           p(v-html="work.description")
@@ -64,10 +67,30 @@ export default {
 <style lang="sass">
 @import "../assets/_mixins.sass"
 .page-work-indep
-  padding-top: 0px
+  padding-top: 50px
+  .logo
+    width: 80px
+    display: inline-block
+    vertical-align: middle
+    
+  .btn-back
+    background-color: #fff
+    padding: 5px 30px
+    color: #333
+    position: absolute
+    left: 0 
+    top: 0
+    +trans
+    &:hover
+      background-color: $colorOrange
+      color: #fff
+      text-decoration: none
   hr
     border: none
-    border-bottom: 1px solid white
+    border-bottom: 2px solid white
+    width: 80%
+    margin-left: 0
+    opacity: 0.5
   .cover
     height: 500px
     background-size: cover

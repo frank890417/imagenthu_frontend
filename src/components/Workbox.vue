@@ -2,9 +2,18 @@
 router-link.workbox(:to="'/works/'+work.id")
   .cover(:style="cssbg(work.cover)")
   .container-fluid
-    h2 {{work.title}}
-    h4 {{work.author}}
-    h4 {{work.place}}
+    .row
+      .col-sm-4
+        SvgInline.logo(:src="work.logo")
+      .col-sm-8
+        h2 {{work.title}}
+        h4 
+          //- i.fa.fa-user
+          span {{work.author}}
+        h4 
+          i.fa.fa-map-marker &nbsp;
+          span {{work.place}}
+    
 
 </template>
 
@@ -31,12 +40,36 @@ export default {
 }
 </script>
 
-<style lang="sass"  scoped>
+<style lang="sass">
 @import "../assets/_mixins.sass"
 .workbox
   color: white
   padding: 20px
   margin-bottom: 100px
+  // .logo
+  //   path
+  //     fill: none
+  .logo
+    margin-top: 30px
+    +trans
+
+    path
+      stroke-dasharray: 500
+      stroke-dashoffset: 500
+      animation: dash 4s linear both
+    @keyframes dash
+      to 
+        stroke-dashoffset: 0
+    @keyframes rr
+      from
+        r: 0
+      to 
+        r: 7
+
+  &:hover
+    .logo
+      transform: scale(1.2)
+
   .titleSpot
     fill: $colorOrange
     margin-top: -200px

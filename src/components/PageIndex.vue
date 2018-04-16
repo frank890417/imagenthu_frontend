@@ -7,9 +7,9 @@
         .col-sm-12
           //- h3 物聯網科技藝術節
           //- h4.orange  + + + + + + +  - - - -   - - -  + +
-        .col-sm-12.flex-center
+        .col-sm-12.flex-center.animated.fadeIn
           img.title(src="static/img/siteimage_cover.svg")
-        .col-sm-12.flex-center
+        .col-sm-12.flex-center.animated.fadeIn
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
           //- .btn.btn-primary 展覽介紹
@@ -57,7 +57,7 @@ export default {
         for(var i=0;i<ww;i++){
           let yy = simplex.noise3D(i/800,mousePos.x/400,tt+mousePos.y/450)
           // console.log(yy)
-          ctx.lineTo( i, 200-70*yy +ypan) 
+          ctx.lineTo( i, wh/2+50+60*yy +ypan) 
         }
         ctx.lineTo(ww,wh)
         ctx.lineTo(0,wh)
@@ -82,7 +82,7 @@ export default {
             color="#F6F5F4"
             break;
         }
-        drawWave(color,time/speed+i/10,i*20+300)
+        drawWave(color,time/speed+i/10,i*20)
      }
 
       // ctx.beginPath()
@@ -152,7 +152,7 @@ export default {
     margin-left: auto
     margin-right: auto
     +rwd_sm
-      margin-top: 20px
+      margin-top: 0px
       width: 120%
       max-width: 120%
   h1

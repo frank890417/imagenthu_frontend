@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import SvgInline from './components/SvgInline.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 
+Vue.component("SvgInline", SvgInline)
 import "slick-carousel/slick/slick.css"
 import SectionFooter from './components/sectionFooter'
 Vue.component("SectionFooter", SectionFooter)

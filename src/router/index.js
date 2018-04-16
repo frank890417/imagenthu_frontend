@@ -65,6 +65,7 @@ router.beforeEach((to,from,next)=>{
 
 router.afterEach((to, from) => {
   window.scrollTo(0, 0)
+  new WOW().init();
 
 })
 
