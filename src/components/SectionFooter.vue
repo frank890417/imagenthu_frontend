@@ -14,7 +14,7 @@
       .row
         .col-sm-3
           //- h1 印象清華
-          img.title(src="/static/img/title.svg")
+          img.title(src="static/img/title.svg")
         .col-sm-3
           ul
             li

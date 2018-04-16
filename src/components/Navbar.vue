@@ -1,7 +1,8 @@
 <template lang="pug">
   nav.navbar.navbar-expand-lg.navbar-dark.fixed-top
     .container
-      router-link.navbar-brand(to='/') 印象清華
+      .num 2018
+      router-link.navbar-brand(to='/') 印象清華 - 物聯網科技藝術節
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExample07', aria-controls='navbarsExample07', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarsExample07.collapse.navbar-collapse
@@ -62,6 +63,13 @@ nav.navbar.navbar-expand-lg.navbar-dark
   right: 0
   padding-left: 0
   padding-right: 0
+  .num
+    position: absolute
+    color: white
+    left: 30px
+    top: 0
+    font-size: 40px
+    opacity: 0.2
   .container
     padding-left: 30px
     padding-right: 30px

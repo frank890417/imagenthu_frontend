@@ -8,7 +8,7 @@
           //- h3 物聯網科技藝術節
           //- h4.orange  + + + + + + +  - - - -   - - -  + +
         .col-sm-12.flex-center
-          img.title(src="/static/img/siteimage_cover.svg")
+          img.title(src="static/img/siteimage_cover.svg")
         .col-sm-12.flex-center
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽

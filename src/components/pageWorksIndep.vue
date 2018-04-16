@@ -15,6 +15,7 @@
           br
           br
           h2 {{work.title}}
+            span.sponsor(v-if="work.sponsor") {{work.sponsor}}
           hr
           p(v-html="work.description")
           br
@@ -71,6 +72,8 @@ export default {
     height: 500px
     background-size: cover
     background-position: center center
+    +rwd_sm
+      height: 300px
     &:before
       content: ''
       display: block
@@ -83,6 +86,12 @@ export default {
 
   h2
     margin-bottom: 20px
+    .sponsor
+      opacity: 0.5
+      color: white
+      font-size: 1rem
+      +rwd_sm
+        display: block
   h3
     margin-bottom: 10px
     font-size: 1.3rem

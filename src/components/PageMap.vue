@@ -16,7 +16,7 @@
                 h3 {{work.title}}
                 p {{work.data}}
           .col-sm-8
-            img(src="/static/img/nthumap.svg")
+            img(src="static/img/nthumap.svg")
 </template>
 
 <script>
