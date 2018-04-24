@@ -22,7 +22,13 @@
 
           p(v-html="work.description")
           br
-          router-link.btn.orange(:to="'/works/n/'+work.key+'/data'") 大數據說明
+          .row
+            .col-sm-8
+              h4 使用數據: 
+                br
+                span {{work.data}}
+            .col-sm-4
+              router-link.btn.orange(:to="'/works/n/'+work.key+'/data'") 大數據說明
           br
           br
           br

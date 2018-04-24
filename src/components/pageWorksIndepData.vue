@@ -5,24 +5,20 @@
       .row
         .col-sm-12
       .row
-        .col-sm-6
+        .col-sm-6.animated.fadeIn.delay-ani-1
           .cover(:style="cssbg(work.cover)")
 
             router-link.btn-back(:to="'/works/n/'+work.key") 
               i.fa.fa-angle-left
               span  查看作品說明
-        .col-sm-6
+        .col-sm-6.animated.fadeIn.delay-ani-4
           br
           br
           h2
-            SvgInline.logo(:src="work.logo")
+            SvgInline.logo.animated.zoomIn.delay-ani-2(:src="work.logo")
             span 〈{{work.title}}〉 
           h3 使用數據說明
-          hr
-          p(v-html="work.description")
-          br
-          br
-          br
+          .explain(v-html="work.data_content")
           
 
             
@@ -113,5 +109,16 @@ export default {
     margin-top: 20px
   // .jumbotron
   //   height: 500px
-
+  .explain
+    opacity:  1
+    span,p
+      opacity: 0.8
+  p.orange-sub-title, span.orange-sub-title
+    // display: block
+    color: $colorOrange
+    opacity: 1
+    font-weight: bold
+    font-size: 1.2em
+    // margin-bottom: 0px
 </style>
+
