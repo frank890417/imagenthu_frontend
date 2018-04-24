@@ -39,12 +39,12 @@
           br
           br
           .btn-group
-            router-link.btn(:class="{orange: $route.meta.type=='description'}",
+            router-link.btn(:class="{orange: $route.meta.type=='data'}",
                             :to="'/works/n/'+work.key+'/data'") 
               i.fa.fa-database
 
-              span &nbsp;使用數據
-            router-link.btn(:class="{orange: $route.meta.type=='data'}",
+              span &nbsp;數據說明
+            router-link.btn(:class="{orange: $route.meta.type=='description'}",
                             :to="'/works/n/'+work.key") 
               i.fa.fa-user
               span &nbsp;作品與作者
@@ -206,12 +206,14 @@ export default {
   .btn-group
     +rwd_sm
       margin-top: -100px
+    color: white
     .btn
       background-color: rgba(white,0.05)
       &.orange
         background-color: $colorOrange
         color: white
-
+      
+  //底部快速導覽列
   .sub_nav
 
     margin-top: 150px
@@ -226,6 +228,7 @@ export default {
         border: solid 1px rgba(white,0.1)
         cursor: pointer
         flex: 1
+        padding: 10px
         +trans
         display: flex
         justify-content: center

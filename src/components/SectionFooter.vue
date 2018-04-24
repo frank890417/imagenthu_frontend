@@ -38,6 +38,13 @@ export default {
     var wh = 300
     canvas.width = ww
     canvas.height = wh
+     window.addEventListener("resize",()=>{
+
+      ww = window.outerWidth
+      wh = 300
+      canvas.width = ww
+      canvas.height = wh
+    })
     // var value2d = simplex.noise2D(x, y)
     
     var time=  0
