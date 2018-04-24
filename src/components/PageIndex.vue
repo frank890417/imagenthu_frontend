@@ -9,7 +9,7 @@
           //- h4.orange  + + + + + + +  - - - -   - - -  + +
         .col-sm-12.flex-center.animated.fadeIn
           img.title(src="static/img/siteimage_cover.svg")
-        .col-sm-12.flex-center.animated.fadeIn.buttons
+        //.col-sm-12.flex-center.animated.fadeIn.buttons
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
           //- .btn.btn-primary 展覽介紹

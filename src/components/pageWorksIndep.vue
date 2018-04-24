@@ -1,6 +1,6 @@
 <template lang="pug">
-.page.page-work-indep.color.blue.animated.fadeIn(:key="work.title")
-  section.sectionHero
+.page.page-work-indep.color.blue
+  section.sectionHero.animated.fadeIn(:key="work.title")
     .container
       .row
         .col-sm-12
@@ -22,8 +22,9 @@
               .col-9
                 span {{work.title}}
                 span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;<br>{{work.sponsor}}
-          h3 作品意涵
-          p(v-html="work.description")
+          .hide-mobile
+            h3 作品意涵
+            p(v-html="work.description")
           .row
             .col-12
               router-link.use_data_box(:to="'/works/n/'+work.key+'/data'")
@@ -47,7 +48,10 @@
                             :to="'/works/n/'+work.key") 
               i.fa.fa-user
               span &nbsp;作品與作者
-          div(v-if="$route.meta.type=='description'").animated.fadeIn
+          div.panel-info(v-if="$route.meta.type=='description'").animated.fadeIn
+            .show-mobile
+              h3 作品意涵
+              p(v-html="work.description")
             br
             br
             h3 藝術家 - {{work.author}}
@@ -55,7 +59,7 @@
             //- br
             //- h3 資料介紹 - {{work.data}}
             //- p(v-html="work.description")
-          div(v-if="$route.meta.type=='data'").animated.fadeIn
+          div.panel-info(v-if="$route.meta.type=='data'").animated.fadeIn
             br
             br
             h2
@@ -110,6 +114,15 @@ export default {
 @import "../assets/_mixins.sass"
 .page-work-indep
   padding-top: 50px
+
+  .hide-mobile
+    display: block
+    +rwd_sm
+      display: none
+  .show-mobile
+    display: none
+    +rwd_sm
+      display: block
   .logo
     width: 80px
     display: inline-block
@@ -127,6 +140,8 @@ export default {
       background-color: $colorOrange
       color: #fff
       text-decoration: none
+  .panel-info
+    // background-color: rgba(white,0.05)
   hr
     border: none
     border-bottom: 2px solid white
@@ -182,12 +197,15 @@ export default {
     h4
       flex: 1
       margin-bottom: 0
+      font-size: 1.2rem
 
     .btn.orange
       float: right
       // display: block
       // position: absolute
   .btn-group
+    +rwd_sm
+      margin-top: -100px
     .btn
       background-color: rgba(white,0.05)
       &.orange
