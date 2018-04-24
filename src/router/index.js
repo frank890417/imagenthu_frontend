@@ -41,11 +41,17 @@ let router =  new Router({
     }, {
       path: '/works/n/:workname',
       name: 'PageWorksIndep2',
-      component: PageWorksIndep
+      component: PageWorksIndep,
+      meta: {
+        type: "description"
+      }
     }, {
       path: '/works/n/:workname/data',
       name: 'PageWorksIndepData',
-      component: PageWorksIndepData
+      component: PageWorksIndep,
+      meta: {
+        type: "data"
+      }
     },{
       path: '/works/:id',
       name: 'PageWorksIndep',
@@ -70,12 +76,29 @@ let router =  new Router({
 })
 
 router.beforeEach((to,from,next)=>{
-  window.scrollTo(0,0)
   next()
 })
 
 router.afterEach((to, from) => {
-  window.scrollTo(0, 0)
+  if ((to.path.indexOf('/works/n') != -1 && from.path.indexOf('/works/n') != -1)) {
+    let tt = to.path.split("/")[3].split("/")[0]
+    let ff = from.path.split("/")[3].split("/")[0]
+    console.log(tt, ff)
+    if (tt == ff) {
+
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }
+  setTimeout(() => {
+    
+    if ( (to.path.indexOf('/works/n') != -1 && from.path.indexOf('/works/n') != -1)){
+     
+    } else {
+  
+      window.scrollTo(0, 0)
+    }
+  }, 400);
   new WOW().init();
 
 })

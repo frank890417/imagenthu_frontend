@@ -1,13 +1,13 @@
 <template lang="pug">
 .page.page-works.color.blue
-  section.container-fluid.slides-area
+  section.container-fluid.slides-area.animated.fadeIn.delay-ani-2
     .row
       .col-sm-12
-        .slick.animated.fadeIn
+        .slick
           router-link.slick-cover(
               v-for="slide in works",
               :style="cssbg(slide.cover)",
-              :to="`/works/${currentSlide.id}`")
+              :to="`/works/n/${currentSlide.key}`")
         i.fa.fa-angle-left.slide-nav(@click="prev")
         i.fa.fa-angle-right.slide-nav.right(@click="next")
   .container
@@ -17,13 +17,15 @@
           span {{currentSlide.title}}
         .work-description(:key="currentSlide.title")
           .ovh
-            .use-data-title.animated.fadeInUp.delay-1  
+            h4.use-data-title.animated.fadeInUp.delay-1  
               i.fa.fa-database
-              | &nbsp;使用數據： {{currentSlide.data}}
+              | &nbsp;使用數據：
+              br
+              | {{currentSlide.data}}
           br
           br
-          p.animated.fadeIn.delay-5 {{currentSlide.description}}
-        .det 0{{currentSlide.id}} 
+          //- p.animated.fadeIn.delay-5 {{currentSlide.description}}
+        .det {{("0"+currentSlide.id).slice(-2)}} 
   //- .jumbotron(:style="cssbg(works[0].cover)") 大圖
   section.sectionHero
     .container
@@ -34,6 +36,7 @@
     .container
       .row
         workbox.col-md-4.col-sm-12.wow.fadeIn(v-for="w in works", :work="w")
+ 
 
 </template>
 
@@ -118,8 +121,12 @@ slickOptions: {
       
     
   .slides-area
-    height: 550px
+    height: 500px
     margin-bottom: 00px
+    margin-left: -15px
+    margin-right: -15px
+    .col-sm-12
+      padding: 0
     +rwd_sm
       height: 300px
   .slick-cover
@@ -131,16 +138,19 @@ slickOptions: {
       height: 300px
   .use-data-title
     font-weight: bold
-    font-size: 1.4em
+    font-size: 1.2em
     // margin-top: -20px
     // margin-bottom: -20px
     display: block
+    letter-spacing: 1px
+    line-height: 2
+    opacity: 0.8
   .det
-    font-size: 420px
+    font-size: 320px
     color: $colorOrange
     position: absolute
     right: 0
-    bottom: -80px
+    bottom: -50px
     font-weight: 900
     +rwd_sm
       font-size: 100px
@@ -169,6 +179,6 @@ slickOptions: {
     z-index: 100
   .work-description
     max-width: 700px
-    margin-bottom: 100px
+    margin-bottom: 20px
     min-height: 8rem
 </style>

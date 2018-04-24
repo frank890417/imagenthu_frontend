@@ -1,5 +1,5 @@
 <template lang="pug">
-.page.page-work-indep.color.blue
+.page.page-work-indep.color.blue.animated.fadeIn(:key="work.title")
   section.sectionHero
     .container
       .row
@@ -11,36 +11,69 @@
             router-link.btn-back(to="/works") 
               i.fa.fa-angle-left
               span  返回
-      .row
+
         .col-sm-5
           br
           br
           h2
-            SvgInline.logo(:src="work.logo")
-            span {{work.title}}
-            span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;{{work.sponsor}}
+            .row
+              .col-3
+                SvgInline.logo.animated.zoomIn.delay-ani-2(:src="work.logo")
+              .col-9
+                span {{work.title}}
+                span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;<br>{{work.sponsor}}
+          .row
+            .col-12
+              router-link.use_data_box(:to="'/works/n/'+work.key+'/data'")
+                h4 
+                  i.fa.fa-database 
+                  span &nbsp;使用數據 : 
+                  span {{work.data}}
+                //- router-link.btn.orange.float-right(:to="'/works/n/'+work.key+'/data'") 大數據說明
 
           p(v-html="work.description")
-          br
-          .row
-            .col-sm-8
-              h4 使用數據: 
-                br
-                span {{work.data}}
-            .col-sm-4
-              router-link.btn.orange(:to="'/works/n/'+work.key+'/data'") 大數據說明
-          br
           br
           br
         .col-sm-7
           br
           br
-          h3 藝術家 - {{work.author}}
-          p(v-html="work.author_description")
-          br
-          h3 資料介紹 - {{work.data}}
-          p(v-html="work.description")
+          .btn-group
+            router-link.btn(:class="{orange: $route.meta.type=='data'}",
+                            :to="'/works/n/'+work.key+'/data'") 
+              i.fa.fa-database
 
+              span &nbsp;使用數據
+            router-link.btn(:class="{orange: $route.meta.type=='description'}",
+                            :to="'/works/n/'+work.key") 
+              i.fa.fa-user
+              span &nbsp;作品與作者
+          div(v-if="$route.meta.type=='description'").animated.fadeIn
+            br
+            br
+            h3 藝術家 - {{work.author}}
+            p(v-html="work.author_description")
+            br
+            h3 資料介紹 - {{work.data}}
+            p(v-html="work.description")
+          div(v-if="$route.meta.type=='data'").animated.fadeIn
+            br
+            br
+            h2
+              //SvgInline.logo.animated.zoomIn.delay-ani-2(:src="work.logo")
+              //span 〈{{work.title}}〉 
+            h3 
+              i.fa.fa-database
+              span &nbsp;使用數據說明
+            .explain(v-html="work.data_content")
+  section.sub_nav
+    .container
+      .col-sm-12
+        h3 瀏覽其他作品
+        .navs
+          router-link.nav-item(v-for="work in works", :to="'/works/n/'+work.key")
+            img(:src="work.logo")
+            .nav-title {{work.title}}
+      
             
 </template>
 
@@ -100,9 +133,10 @@ export default {
     margin-left: 0
     opacity: 0.5
   .cover
-    height: 500px
+    height: 50vh
     background-size: cover
     background-position: center center
+
     +rwd_sm
       height: 300px
     &:before
@@ -121,12 +155,72 @@ export default {
       opacity: 0.5
       color: white
       font-size: 1rem
+      margin-top: -40px
+      display: block
       +rwd_sm
         display: block
   h3
     margin-bottom: 10px
     font-size: 1.3rem
     margin-top: 20px
+
+
+  .use_data_box
+    padding: 10px 15px
+    border-radius: 5px
+    // border: 1px solid white
+    background-color: rgba(white,0.05)
+    cursor: pointer
+    color: white
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 20px
+    &:hover
+        background-color: rgba(white,0.08)
+    h4
+      flex: 1
+      margin-bottom: 0
+
+    .btn.orange
+      float: right
+      // display: block
+      // position: absolute
+  .btn-group
+    .btn
+      background-color: rgba(white,0.05)
+      &.orange
+        background-color: $colorOrange
+        color: white
+
+  .sub_nav
+
+    margin-top: 150px
+    cursor: pointer
+    margin-bottom: -50px
+    +rwd_sm
+      display: none
+    .navs
+      display: flex
+      width: 100%
+      .nav-item
+        border: solid 1px rgba(white,0.1)
+        cursor: pointer
+        flex: 1
+        +trans
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &:hover
+          background-color: rgba(white,0.1)
+        
+      img
+        height: calc(100vw / 12)
+      a
+        color: inherit
+        
+
   // .jumbotron
   //   height: 500px
 

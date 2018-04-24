@@ -5,7 +5,8 @@
     pageLoading(v-if="loading")
   .all_pages_area(:class="{nopadding: $route.meta.nopadding}")
     transition(name="fade" , mode="out-in")
-      router-view(:key="$route.path")
+      router-view
+      //(:key="$route.path")
   footer(v-if="$route.path!='/'")
     SectionFooter
 </template>
