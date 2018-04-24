@@ -40,14 +40,14 @@ let router =  new Router({
       }
     }, {
       path: '/works/n/:workname',
-      name: 'PageWorksIndep2',
+      name: 'PageWorksIndep',
       component: PageWorksIndep,
       meta: {
         type: "description"
       }
     }, {
       path: '/works/n/:workname/data',
-      name: 'PageWorksIndepData',
+      name: 'PageWorksIndep',
       component: PageWorksIndep,
       meta: {
         type: "data"
