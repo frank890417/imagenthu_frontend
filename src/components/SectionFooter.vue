@@ -1,7 +1,15 @@
 <template lang="pug">
 .sectionFooter
   canvas.lines
-  p.legal 活動洽詢：03-5715131 ＃78803 劉老師
+  p.legal 
+    br
+    br
+    br
+    br
+    br
+    span 活動洽詢：03-5715131 ＃78803
+    br
+    span 國立清華大學 科技藝術研究中心 ｜30014 新竹市東區南大路521號
     //- span 活動網站：http://techart.nthu.edu.tw/THE2018/
     span <br>粉絲頁：
       a(href="https://www.facebook.com/%E9%9D%A0%E5%8D%97%E6%B8%85%E5%A4%A7-1944000092504903/" target="_blank") 靠南清大

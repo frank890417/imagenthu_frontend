@@ -4,7 +4,7 @@
       .container
         br
         br
-        h4.color.orange.text-center Exhibition Map
+        h4.color.orange.text-center Artwork Location Map
         h1.text-center 展覽地圖
       .container
         .row

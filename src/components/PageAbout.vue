@@ -27,17 +27,13 @@
             br
             br
           ul.delay-ani-7.animated.floatInUp
-            li 展覽時間：2018.4.28（六）～5.20（日）
             li 開幕時間：2018.4.27（五）10:00AM
+            li 展覽時間：2018.4.28（六）～5.20（日）
             li 開幕地點：名人堂
             li 指導單位：國立清華大學 清華學院
             li 主辦單位：科技藝術研究中心、藝術學院
             li 特別感謝：國立清華大學校友會
             li 策 展 人：許素朱
-            li 執行策展人：林雅芳
-            li 策展執行：蔡宜婷
-            li 技術總監：劉士達
-            li 設計總監：蔡奇宏
   //section.sectionIntro
     .container
       .row
@@ -65,5 +61,4 @@ export default {
     background-position: center center
   .col-content
     padding-left: 50px
-
 </style>
