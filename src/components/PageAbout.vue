@@ -34,6 +34,7 @@
             li 主辦單位：科技藝術研究中心、藝術學院
             li 特別感謝：國立清華大學校友會
             li 策 展 人：許素朱
+            li 執行策展人：林雅芳
   //section.sectionIntro
     .container
       .row

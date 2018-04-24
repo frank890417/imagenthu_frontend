@@ -11,6 +11,10 @@
                       :class="{active: route.path==$route.path}")
             router-link.nav-link(:to="route.path")
               | {{ route.name }}
+          li.nav-item
+            a.nav-link(href="https://www.facebook.com/%E9%9D%A0%E5%8D%97%E6%B8%85%E5%A4%A7-1944000092504903/",
+                        target="_blank")
+              i.fa.fa-facebook
           //li.nav-item.dropdown
             a#dropdown07.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
             .dropdown-menu(aria-labelledby='dropdown07')
@@ -33,6 +37,7 @@ export default {
         {name: "展覽地圖", path: "/map"},
         {name: "策展團隊", path: "/plan"},
         {name: "聯絡與交通", path: "/contact"},
+
       ]
     }
   },
@@ -56,13 +61,17 @@ export default {
 
 <style lang="sass"> 
 @import "../assets/_mixins.sass"
-nav.navbar.navbar-expand-lg.navbar-dark
+nav.navbar.navbar-expand-lg.navbar-dark.navbar-dark
   border-bottom: 5px solid $colorOrange
   position: fixed
   background-color: #0C0C0C
   right: 0
   padding-left: 0
   padding-right: 0
+  .nav-link
+    color: rgba(white,0.8)
+    letter-spacing: 1px
+
   .num
     position: absolute
     color: white
@@ -78,9 +87,16 @@ nav.navbar.navbar-expand-lg.navbar-dark
   .nav-item
     padding-left: 20px
     padding-right: 20px
-  .nav-item.active
+    // +trans
+    &:hover
+      .nav-link
+        color: rgba(white,1)
+  .nav-item.active 
     border-bottom: 10px solid $colorOrange
     margin-bottom: -10px
+    .nav-link
+      color: rgba(white,1)
+
     +rwd_sm
       border-bottom: 5px solid $colorOrange
       margin-bottom: 10px
