@@ -22,6 +22,8 @@
               .col-9
                 span {{work.title}}
                 span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;<br>{{work.sponsor}}
+          h3 作品意涵
+          p(v-html="work.description")
           .row
             .col-12
               router-link.use_data_box(:to="'/works/n/'+work.key+'/data'")
@@ -30,20 +32,18 @@
                   span &nbsp;使用數據 : 
                   span {{work.data}}
                 //- router-link.btn.orange.float-right(:to="'/works/n/'+work.key+'/data'") 大數據說明
-
-          p(v-html="work.description")
           br
           br
         .col-sm-7
           br
           br
           .btn-group
-            router-link.btn(:class="{orange: $route.meta.type=='data'}",
+            router-link.btn(:class="{orange: $route.meta.type=='description'}",
                             :to="'/works/n/'+work.key+'/data'") 
               i.fa.fa-database
 
               span &nbsp;使用數據
-            router-link.btn(:class="{orange: $route.meta.type=='description'}",
+            router-link.btn(:class="{orange: $route.meta.type=='data'}",
                             :to="'/works/n/'+work.key") 
               i.fa.fa-user
               span &nbsp;作品與作者
@@ -52,9 +52,9 @@
             br
             h3 藝術家 - {{work.author}}
             p(v-html="work.author_description")
-            br
-            h3 資料介紹 - {{work.data}}
-            p(v-html="work.description")
+            //- br
+            //- h3 資料介紹 - {{work.data}}
+            //- p(v-html="work.description")
           div(v-if="$route.meta.type=='data'").animated.fadeIn
             br
             br
@@ -64,7 +64,8 @@
             h3 
               i.fa.fa-database
               span &nbsp;使用數據說明
-            .explain(v-html="work.data_content")
+
+              .explain(v-html="work.data_content")
   section.sub_nav
     .container
       .col-sm-12
@@ -216,7 +217,7 @@ export default {
           background-color: rgba(white,0.1)
         
       img
-        height: calc(100vw / 12)
+        width: 100%
       a
         color: inherit
         
