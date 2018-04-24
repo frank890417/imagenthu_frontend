@@ -31,7 +31,7 @@
     .container
       .row
         .col-sm-12
-          h2.title 展品一覽
+          h2.title 作品介紹
   section.sectionHero
     .container
       .row

@@ -33,8 +33,8 @@ export default {
     return {
       routes: [
         {name: "展覽介紹", path: "/about"},
-        {name: "展品一覽", path: "/works"},
-        {name: "展覽地圖", path: "/map"},
+        {name: "作品介紹", path: "/works"},
+        {name: "展場地圖", path: "/map"},
         {name: "策展團隊", path: "/plan"},
         {name: "聯絡與交通", path: "/contact"},
 

@@ -7,8 +7,10 @@
         .col-sm-12
           //- h3 物聯網科技藝術節
           //- h4.orange  + + + + + + +  - - - -   - - -  + +
-        .col-sm-12.flex-center.animated.fadeIn
+        .col-sm-12.flex-center.animated.fadeIn.flex-direction-column
           img.title(src="static/img/siteimage_cover.svg")
+          br
+          h3 4/29啟動「大數據」QRCode 密碼，獎品等你拿！
         //.col-sm-12.flex-center.animated.fadeIn.buttons
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
@@ -124,6 +126,8 @@ export default {
   box-sizing: border-box
   background-color: white
   color: white
+  .flex-direction-column
+    flex-direction: column
   canvas
     pointer-events: none
   .buttons

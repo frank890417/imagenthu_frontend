@@ -10,8 +10,621 @@ let data = [
     data: "清大學院招生與學習數據",
     data_description: "",
     cover: "http://techart.nthu.edu.tw/wp-content/uploads/2018/03/THE2018-Window.jpg",
-    author: "三極体飯糰",
-    author_description: "三吉体飯團，由黃偉、羅佳柔、鄭羽芝三人組成，仍在廣泛學習中的跨領域創作新團體，從事作品乃在各式媒材中尋找出不一樣的觀看方式。"
+    author: "三吉体飯糰",
+    author_description: "三吉体飯團，由黃偉、羅佳柔、鄭羽芝三人組成，仍在廣泛學習中的跨領域創作新團體，從事作品乃在各式媒材中尋找出不一樣的觀看方式。",
+    data_content: `<p>清華學生學習表現數據分析平台是國內大學做的最完整之一，我們把教務處招生策略中心所提供的招生與學習數據，透過〈窗〉做整點的數據雕塑。我們好奇著清華在「學生人數比率、註冊率」、「多元學生組成狀況」、「男女 PK」、「社團活躍度」…等情形如何？〈窗〉將以「間格亮光」來作答回覆給我們。</p><br>
+</span></p>
+<p>清華「校本部8個學院」對應「窗格位置」如下：</p>
+<table style="height: 177px; width: 227px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;">理學院</td>
+<td style="width: 100px;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">電機資訊學院</td>
+<td style="width: 100px;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">原子科學院</td>
+<td style="width: 100px;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">清華學院</td>
+<td style="width: 100px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #008000;">互動情境：</span><br>
+<h4 class='mt-4'>問題① ：106學年度清華大學學生人數（學士+碩+博）最多的前三個學院？</h4><br>
+106 學年度下學期在學總人數統計人多氣勢強！清華前三大學院！</p>
+<p><!--------------------------------------------------------></p>
+<table style="height: 177px; width: 227px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">電機資訊學院</td>
+<td style="width: 100px;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">原子科學院</td>
+<td style="width: 100px;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">清華學院</td>
+<td style="width: 100px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 706px;" border="1">
+<tbody>
+<tr>
+<td style="width: 70px;">&nbsp;</td>
+<td style="width: 35px;">理</td>
+<td style="width: 33px;">工</td>
+<td style="width: 19.6667px;">電資</td>
+<td style="width: 32.3333px;">人社</td>
+<td style="width: 26px;">原科</td>
+<td style="width: 10px;">科管</td>
+<td style="width: 10px;">清華</td>
+<td style="width: 10px;">生科</td>
+</tr>
+<tr>
+<td style="width: 70px;">大學+碩+博<br>
+在學總人數</td>
+<td style="width: 35px;"><span style="color: #ff0000;">1584</span></td>
+<td style="width: 33px;"><span style="color: #ff0000;">2838</span></td>
+<td style="width: 19.6667px;"><span style="color: #ff0000;">2508</span></td>
+<td style="width: 32.3333px;">1256</td>
+<td style="width: 26px;">1115</td>
+<td style="width: 10px;">1344</td>
+<td style="width: 10px;">170</td>
+<td style="width: 10px;">753</td>
+</tr>
+<tr>
+<td style="width: 70px;">人數比例</td>
+<td style="width: 35px;"><span style="color: #ff0000;">9.96%</span></td>
+<td style="width: 33px;"><span style="color: #ff0000;">17.85%</span></td>
+<td style="width: 19.6667px;"><span style="color: #ff0000;">15.77%</span></td>
+<td style="width: 32.3333px;">7.90%</td>
+<td style="width: 26px;">7.01%</td>
+<td style="width: 10px;">8.45%</td>
+<td style="width: 10px;">1.07%</td>
+<td style="width: 10px;">4.74%</td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：清華大學註冊組&nbsp; <a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">http</a><a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">://</a><a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">registra.web.nthu.edu.tw/files/11-1086-1811.php</a></p>
+<p>&nbsp;</p>
+<p><!----------②----------------------------------------------><br>
+<h4 class='mt-4'>問題②：106學年度清華大學學士班註冊率高於校註冊率的學院？<br>
+</h4>(報到率高的人氣學院)</p>
+<table style="height: 177px; width: 227px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">電機資訊學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">原子科學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">清華學院</td>
+<td style="width: 100px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 699.35px;" border="1">
+<tbody>
+<tr>
+<td style="width: 60px;">&nbsp;</td>
+<td style="width: 64px;">全校</td>
+<td style="width: 67px;"><span>理</span></td>
+<td style="width: 67px;"><span>工</span></td>
+<td style="width: 66px;"><span>電資</span></td>
+<td style="width: 60px;"><span>人社</span></td>
+<td style="width: 57px;"><span>原科</span></td>
+<td style="width: 63px;"><span>科管</span></td>
+<td style="width: 60px;">清華</td>
+<td style="width: 62.35px;">生科</td>
+</tr>
+<tr>
+<td style="width: 60px;">註冊率</td>
+<td style="width: 64px;">95.76%</td>
+<td style="width: 67px;"><span style="color: #ff0000;">98.82%</span></td>
+<td style="width: 67px;"><span style="color: #ff0000;">97.12%</span></td>
+<td style="width: 66px;"><span style="color: #ff0000;">96.46%</span></td>
+<td style="width: 60px;"><span style="color: #ff0000;">96.37%</span></td>
+<td style="width: 57px;"><span style="color: #ff0000;">97.65%</span></td>
+<td style="width: 63px;"><span style="color: #ff0000;">96.52%</span></td>
+<td style="width: 60px;">93.88%</td>
+<td style="width: 62.35px;">89.22%</td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：統計處大專校院系所特色及新生註冊率查詢網站<br>
+<a href="https://stats.moe.gov.tw/enrollweb/Default.aspx">https</a><a href="https://stats.moe.gov.tw/enrollweb/Default.aspx">://</a><a href="https://stats.moe.gov.tw/enrollweb/Default.aspx">stats.moe.gov.tw/enrollweb/Default.aspx</a></p>
+<p><!-----------③----------------><br>
+<h4 class='mt-4'>問題③：106學年度清華大學具多管齊下的入學管道的學院？<br>
+</h4><span style="font-size: 16px;">（入學管道多元的學院，學生組成包含繁星推薦、個人申請、考試分發與特殊選才等四個管道）</span></p>
+<table style="height: 177px; width: 227px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">電機資訊學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">原子科學院</td>
+<td style="width: 100px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">清華學院</td>
+<td style="width: 100px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 485.233px;" border="1">
+<tbody>
+<tr>
+<td style="width: 65px;">&nbsp;</td>
+<td style="width: 46px;"><span>理</span></td>
+<td style="width: 46px;"><span>工</span></td>
+<td style="width: 44px;"><span>電資</span></td>
+<td style="width: 44px;"><span>人社</span></td>
+<td style="width: 43px;"><span>原科</span></td>
+<td style="width: 44px;"><span>科管</span></td>
+<td style="width: 45px;"><span>清華</span></td>
+<td style="width: 43.2333px;">生科</td>
+</tr>
+<tr>
+<td style="width: 65px;">入學<br>
+管道數</td>
+<td style="width: 46px;"><span style="color: #ff0000;">４</span></td>
+<td style="width: 46px;"><span style="color: #ff0000;">4</span></td>
+<td style="width: 44px;"><span style="color: #ff0000;">４</span></td>
+<td style="width: 44px;"><span style="color: #ff0000;">４</span></td>
+<td style="width: 43px;">３</td>
+<td style="width: 44px;"><span style="color: #ff0000;">４</span></td>
+<td style="width: 45px;">２</td>
+<td style="width: 43.2333px;">３</td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：清華學生學習表現數據分析平台</p>
+<br>
+<p><h4 class='mt-4'>問題④：105學年度清華大學各學院學生最能<b>呈現全臺區域人口縮影的學院</b>？
+</h4>（學生組成最接近臺灣人口分布的學院）</p>
+<table style="height: 177px; width: 227px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 100px;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">電機資訊學院</td>
+<td style="width: 100px;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">原子科學院</td>
+<td style="width: 100px;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;"><span style="color: #ff0000;">全校概況</span></td>
+<td style="width: 100px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 894.533px;" border="1">
+<tbody>
+<tr>
+<td style="width: 95px;">&nbsp;</td>
+<td style="width: 81px;">全國</td>
+<td style="width: 70px;">全校</td>
+<td style="width: 68px;"><span>理</span></td>
+<td style="width: 73px;"><span>工</span></td>
+<td style="width: 67px;"><span>電資</span></td>
+<td style="width: 61px;">人社</td>
+<td style="width: 71px;">原科</td>
+<td style="width: 71px;">科管</td>
+<td style="width: 78px;">清華</td>
+<td style="width: 78.5333px;">生科</td>
+</tr>
+<tr>
+<td style="width: 95px;">北部</td>
+<td style="width: 81px;">45.77%</td>
+<td style="width: 70px;">59.52%</td>
+<td style="width: 68px;"><span style="color: #ff0000;">53.03%</span></td>
+<td style="width: 73px;">66.04%</td>
+<td style="width: 67px;"><span style="color: #ff0000;">50.00%</span></td>
+<td style="width: 61px;">56.47%</td>
+<td style="width: 71px;">58.02%</td>
+<td style="width: 71px;">69.16%</td>
+<td style="width: 78px;">0.00%</td>
+<td style="width: 78.5333px;">63.08%</td>
+</tr>
+<tr>
+<td style="width: 95px;">中部</td>
+<td style="width: 81px;">25.65%</td>
+<td style="width: 70px;">19.98%</td>
+<td style="width: 68px;"><span style="color: #ff0000;">22.73%</span></td>
+<td style="width: 73px;">16.23%</td>
+<td style="width: 67px;"><span style="color: #ff0000;">27.44%</span></td>
+<td style="width: 61px;">24.71%</td>
+<td style="width: 71px;">17.56%</td>
+<td style="width: 71px;">14.02%</td>
+<td style="width: 78px;">50.00%</td>
+<td style="width: 78.5333px;">18.46%</td>
+</tr>
+<tr>
+<td style="width: 95px;">南部</td>
+<td style="width: 81px;">23.32%</td>
+<td style="width: 70px;">19.14%</td>
+<td style="width: 68px;"><span style="color: #ff0000;">23.48%</span></td>
+<td style="width: 73px;">16.60%</td>
+<td style="width: 67px;"><span style="color: #ff0000;">20.73%</span></td>
+<td style="width: 61px;">14.12%</td>
+<td style="width: 71px;">23.66%</td>
+<td style="width: 71px;">16.82%</td>
+<td style="width: 78px;">0.00%</td>
+<td style="width: 78.5333px;">18.46%</td>
+</tr>
+<tr>
+<td style="width: 95px;">東部和離島</td>
+<td style="width: 81px;">5.35%</td>
+<td style="width: 70px;">1.37%</td>
+<td style="width: 68px;"><span style="color: #ff0000;">0.76%</span></td>
+<td style="width: 73px;">1.13%</td>
+<td style="width: 67px;"><span style="color: #ff0000;">1.83%</span></td>
+<td style="width: 61px;">4.71%</td>
+<td style="width: 71px;">0.76%</td>
+<td style="width: 71px;">0.00%</td>
+<td style="width: 78px;">50.00%</td>
+<td style="width: 78.5333px;">0.00%</td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：清華學生學習表現數據分析平台</p>
+<br>
+<p><h4 class='mt-4'>⑤問題：105 學年度學生來源高中數最廣泛的前三個學院？</h4></p>
+<table style="width: 226.85px;" border="1">
+<tbody>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 110.85px;">工學院</td>
+</tr>
+<tr>
+<td style="width: 100px;">電機資訊學院</td>
+<td style="width: 110.85px;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 100px;background-color: yellow;color: black;">原子科學院</td>
+<td style="width: 110.85px;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 100px;"><span style="color: #ff0000;">全校概況</span></td>
+<td style="width: 110.85px;background-color: yellow;color: black;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 788px;" border="1">
+<tbody>
+<tr>
+<td style="width: 80px;">&nbsp;</td>
+<td style="width: 75.7px;">全校</td>
+<td style="width: 64.3px;">理</td>
+<td style="width: 74px;">工</td>
+<td style="width: 61px;">電資</td>
+<td style="width: 63px;">人社</td>
+<td style="width: 74px;">原科</td>
+<td style="width: 76px;">科管</td>
+<td style="width: 74px;">清華</td>
+<td style="width: 72px;">生科</td>
+</tr>
+<tr>
+<td style="width: 80px;">高中數</td>
+<td style="width: 75.7px;">182</td>
+<td style="width: 64.3px;">76</td>
+<td style="width: 74px;">96</td>
+<td style="width: 61px;">84</td>
+<td style="width: 63px;">68</td>
+<td style="width: 74px;">63</td>
+<td style="width: 76px;">73</td>
+<td style="width: 74px;"><span style="color: #ff0000;">13</span></td>
+<td style="width: 72px;">41</td>
+</tr>
+<tr>
+<td style="width: 80px;">學院人數</td>
+<td style="width: 75.7px;">1359</td>
+<td style="width: 64.3px;">197</td>
+<td style="width: 74px;">331</td>
+<td style="width: 61px;">249</td>
+<td style="width: 63px;">152</td>
+<td style="width: 74px;">154</td>
+<td style="width: 76px;">193</td>
+<td style="width: 74px;"><span style="color: #ff0000;">18</span></td>
+<td style="width: 72px;">80</td>
+</tr>
+<tr>
+<td style="width: 80px;">%</td>
+<td style="width: 75.7px;">13.39%</td>
+<td style="width: 64.3px;"><span style="color: #ff0000;">38.58%</span></td>
+<td style="width: 74px;">29.00%</td>
+<td style="width: 61px;">33.73%</td>
+<td style="width: 63px;">29.82%</td>
+<td style="width: 74px;"><span style="color: #ff0000;">44.74%</span></td>
+<td style="width: 76px;">37.82%</td>
+<td style="width: 74px;"><span style="color: #ff0000;">72.22%</span></td>
+<td style="width: 72px;"><span style="color: #ff0000;">51.25%</span></td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：招生原始數據分析</p>
+<br>
+<p><h4 class='mt-4'>問題⑥：106 學年度下學期僑外生在學人數統計最國際化的五個學院？<br>
+</h4>（全校僑外生比例約5.99%）</p>
+<table style="width: 221px;" border="1">
+<tbody>
+<tr>
+<td style="width: 103.033px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 103.967px;">工學院</td>
+</tr>
+<tr>
+<td style="width: 103.033px;">電機資訊學院</td>
+<td style="width: 103.967px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 103.033px;">原子科學院</td>
+<td style="width: 103.967px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 103.033px;background-color: yellow;color: black;">清華學院</td>
+<td style="width: 103.967px;background-color: yellow;color: black;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 664.767px;" border="1">
+<tbody>
+<tr>
+<td style="width: 135px;">&nbsp;</td>
+<td style="width: 68px;"><span>理</span></td>
+<td style="width: 68px;">工</td>
+<td style="width: 59px;">電資</td>
+<td style="width: 54px;">人社</td>
+<td style="width: 53px;">原科</td>
+<td style="width: 54px;">科管</td>
+<td style="width: 53px;">清華</td>
+<td style="width: 53.7667px;">生科</td>
+</tr>
+<tr>
+<td style="width: 135px;">學院僑外生人數</td>
+<td style="width: 68px;"><span style="color: #ff0000;">153</span></td>
+<td style="width: 68px;"><span style="color: #ff0000;">179</span></td>
+<td style="width: 59px;"><span style="color: #ff0000;">115</span></td>
+<td style="width: 54px;"><span style="color: #ff0000;">103</span></td>
+<td style="width: 53px;">74</td>
+<td style="width: 54px;">95</td>
+<td style="width: 53px;">19</td>
+<td style="width: 53.7667px;">51</td>
+</tr>
+<tr>
+<td style="width: 135px;">學院僑外生佔該院總人數比例</td>
+<td style="width: 68px;"><span style="color: #ff0000;">9.66%</span></td>
+<td style="width: 68px;">6.31%</td>
+<td style="width: 59px;">4.59%</td>
+<td style="width: 54px;"><span style="color: #ff0000;">8.20%</span></td>
+<td style="width: 53px;">6.64%</td>
+<td style="width: 54px;"><span style="color: #ff0000;">7.07%</span></td>
+<td style="width: 53px;"><span style="color: #ff0000;">11.18%</span></td>
+<td style="width: 53.7667px;"><span style="color: #ff0000;">6.77%</span></td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：清華大學註冊組 <a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php" target="_blank" rel="noopener">http://registra.web.nthu.edu.tw/files/11-1086-1811.php</a></p>
+<br>
+<p><h4 class='mt-4'>問題⑦：106 學年度女多男少的學院？</h4><br>
+（女生人數比男生多的學院）</p>
+<table style="width: 223px;" border="1">
+<tbody>
+<tr>
+<td style="width: 108.5px;">理學院</td>
+<td style="width: 99.5px;">工學院</td>
+</tr>
+<tr>
+<td style="width: 108.5px;">電機資訊學院</td>
+<td style="width: 99.5px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 108.5px;">原子科學院</td>
+<td style="width: 99.5px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 108.5px;background-color: yellow;color: black;">清華學院</td>
+<td style="width: 99.5px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 676.05px;" border="1">
+<tbody>
+<tr>
+<td style="width: 53px;">&nbsp;</td>
+<td style="width: 69px;">全校</td>
+<td style="width: 68px;">理</td>
+<td style="width: 68px;">工</td>
+<td style="width: 67px;">電資</td>
+<td style="width: 58px;">人社</td>
+<td style="width: 55px;">原科</td>
+<td style="width: 55px;">科管</td>
+<td style="width: 56px;">清華</td>
+<td style="width: 55.05px;">生科</td>
+</tr>
+<tr>
+<td style="width: 53px;">男生</td>
+<td style="width: 69px;">59.7%</td>
+<td style="width: 68px;">81.9%</td>
+<td style="width: 68px;">71.7%</td>
+<td style="width: 67px;">80.9%</td>
+<td style="width: 58px;"><span style="color: #ff0000;">21.0%</span></td>
+<td style="width: 55px;">59.4%</td>
+<td style="width: 55px;"><span style="color: #ff0000;">42.9%</span></td>
+<td style="width: 56px;"><span style="color: #ff0000;">40.2%</span></td>
+<td style="width: 55.05px;">54.3%</td>
+</tr>
+<tr>
+<td style="width: 53px;">女生</td>
+<td style="width: 69px;">41.3%</td>
+<td style="width: 68px;">18.1%</td>
+<td style="width: 68px;">28.3%</td>
+<td style="width: 67px;">19.1%</td>
+<td style="width: 58px;"><span style="color: #ff0000;">79.0%</span></td>
+<td style="width: 55px;">40.6%</td>
+<td style="width: 55px;"><span style="color: #ff0000;">57.1%</span></td>
+<td style="width: 56px;"><span style="color: #ff0000;">59.8%</span></td>
+<td style="width: 55.05px;">45.7%</td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：大學男女比（教育部統計處）<br>
+<a href="https://university-tw.ldkrsi.men/FemaleRatio/#gsc.tab=0" target="_blank" rel="noopener">https://university-tw.ldkrsi.men/FemaleRatio/#gsc.tab=0 </a></p>
+<br>
+<p><h4 class='mt-4'>問題⑧：101-105 學年度女學霸橫行的學院？</h4><br>
+（女生學業表現優於男生）</p>
+<table style="width: 222.35px;" border="1">
+<tbody>
+<tr>
+<td style="width: 106px;background-color: yellow;color: black;">理學院</td>
+<td style="width: 101.35px;background-color: yellow;color: black;">工學院</td>
+</tr>
+<tr>
+<td style="width: 106px;background-color: yellow;color: black;">電機資訊學院</td>
+<td style="width: 101.35px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 106px;background-color: yellow;color: black;">原子科學院</td>
+<td style="width: 101.35px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 106px;background-color: yellow;color: black;"><span style="color: #ff0000;">全校概況</span></td>
+<td style="width: 101.35px;background-color: yellow;color: black;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 689px;" border="1">
+<tbody>
+<tr>
+<td style="width: 65px;">&nbsp;</td>
+<td style="width: 65px;">全校</td>
+<td style="width: 64px;">理</td>
+<td style="width: 65px;">工</td>
+<td style="width: 63px;">電資</td>
+<td style="width: 58px;">人社</td>
+<td style="width: 59px;">原科</td>
+<td style="width: 56px;">科管</td>
+<td style="width: 60.4167px;">清華</td>
+<td style="width: 59.5833px;">生科</td>
+</tr>
+<tr>
+<td style="width: 65px;">男生</td>
+<td style="width: 65px;">54.55%</td>
+<td style="width: 64px;">42.91%</td>
+<td style="width: 65px;">43.20%</td>
+<td style="width: 63px;">42.76%</td>
+<td style="width: 58px;">45.19%</td>
+<td style="width: 59px;">39.68%</td>
+<td style="width: 56px;">45.61%</td>
+<td style="width: 60.4167px;">56.07%</td>
+<td style="width: 59.5833px;">41.30%</td>
+</tr>
+<tr>
+<td style="width: 65px;">女生</td>
+<td style="width: 65px;">45.45%</td>
+<td style="width: 64px;">52.00%</td>
+<td style="width: 65px;">50.75%</td>
+<td style="width: 63px;">51.89%</td>
+<td style="width: 58px;">59.48%</td>
+<td style="width: 59px;">52.80%</td>
+<td style="width: 56px;">56.06%</td>
+<td style="width: 60.4167px;">80.69%</td>
+<td style="width: 59.5833px;">56.04%</td>
+</tr>
+</tbody>
+</table>
+<p>學業名次百分比平均值（數值越小代表成績排名越好）<br>
+資料來源：清華學生學習表現數據分析平台</p>
+<br>
+<p><h4 class='mt-4'>問題⑨：101-105 學年度會念書、更會玩！培養最多社團社長的四個學院？</h4></p>
+<table style="width: 225.367px;" border="1">
+<tbody>
+<tr>
+<td style="width: 101px;">理學院</td>
+<td style="width: 109.367px;background-color: yellow;color: black;">工學院</td>
+</tr>
+<tr>
+<td style="width: 101px;">電機資訊學院</td>
+<td style="width: 109.367px;background-color: yellow;color: black;">人文社會學院</td>
+</tr>
+<tr>
+<td style="width: 101px;background-color: yellow;color: black;">原子科學院</td>
+<td style="width: 109.367px;background-color: yellow;color: black;">科技管理學院</td>
+</tr>
+<tr>
+<td style="width: 101px;">清華學院</td>
+<td style="width: 109.367px;">生命科學院</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 670.183px;" border="1">
+<tbody>
+<tr>
+<td style="width: 68px;">&nbsp;</td>
+<td style="width: 58px;">全校</td>
+<td style="width: 61px;">理</td>
+<td style="width: 59px;">工</td>
+<td style="width: 58px;">電資</td>
+<td style="width: 62px;">人社</td>
+<td style="width: 55px;">原科</td>
+<td style="width: 60px;">科管</td>
+<td style="width: 53px;">清華</td>
+<td style="width: 62.1834px;">生科</td>
+</tr>
+<tr>
+<td style="width: 68px;">社長比例</td>
+<td style="width: 58px;">14.29%</td>
+<td style="width: 61px;">11.74%</td>
+<td style="width: 59px;"><span style="color: #ff0000;">24.41%</span></td>
+<td style="width: 58px;">10.80%</td>
+<td style="width: 62px;"><span style="color: #ff0000;">13.62%</span></td>
+<td style="width: 55px;"><span style="color: #ff0000;">15.49%</span></td>
+<td style="width: 60px;"><span style="color: #ff0000;">13.62%</span></td>
+<td style="width: 53px;">0</td>
+<td style="width: 62.1834px;">10.33%<p></p>
+<p>&nbsp;</p></td>
+</tr>
+</tbody>
+</table>
+<p>資料來源：清華學生學習表現數據分析平台</p>
+<p>&nbsp;</p>
+`
   }, {
     id: 1+1,
     key: "Needlework",
@@ -112,7 +725,7 @@ let data = [
     cover: "http://techart.nthu.edu.tw/wp-content/uploads/2018/03/THE2018-geometrix.jpg",
     author: "陳威諭",
     author_description: "陳威諭，作品涉及訊號、機械、人工智慧等，嘗試找尋科技內的細微現象，關注科技對人類行為的影響，以人機互動、演算法介入日常空間，探討一種資訊、虛構融入生活空間的未來想像。",
-    data_content: `<p><span class='orange-sub-title'>互動情境：<span style="color: #000000;">（整點模式）</span></span><br>
+    data_content: `<p><span class='orange-sub-title'>互動情境：<span>（整點模式）</span></span><br>
 ① 立體矩形，Led以彩色發光，代表整點數據呈現。<br>
 ②每一邊燈管亮代表80人進圖書館，一個立體矩形全亮，代表當天有960人進圖書館。若三個立體矩形全亮，則代表當天 2880人進圖書館。</p><p>註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
 註2：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>`
@@ -146,7 +759,7 @@ let data = [
     cover: "http://techart.nthu.edu.tw/wp-content/uploads/2018/03/THE2018-Eng8-2.jpg",
     author: "劉士達、許素朱、吳哲宇",
     author_description: "<u>劉士達</u>，畢業於臺北藝術大學科技藝術研究所，曾創辦台灣Arduino.TW網站，是台灣Arduino技術創意開發最具代表性人物之一，亦曾擔任過2017台北世大運開幕表演道具技術總監，以及擔任2014、2015年工研院解密國家寶藏－奇想樂園互動科技體驗館之系統開發總監，技術跨域整合的實務經驗豐富，現為清華大學科技藝術研究中心組長與藝術學院學士班講師。<br><u>吳哲宇</u>，交大電機系畢業，喜歡視覺設計與程式撰寫，是設計與網頁雙棲工程師。大二創立墨雨設計，致力結合動態精神於網頁中，以程式創作動畫與特效，亦嘗試開設線上課程做設計整合程式導向教學。近期轉往互動裝置藝術裝置領域探索，盼能找到更具跳戰的媒材與感動。",
-    data_content: `<p><span class='orange-sub-title'>互動情境：<span style="color: #000000;">（整點模式）</span></span><br>
+    data_content: `<p><span class='orange-sub-title'>互動情境：<span>（整點模式）</span></span><br>
 ①整點英文數據模式：十根Led光柱代表不同學院，每天定點出現每個學院的英文學習累積成績。（本作品提供英文學習APP，如下。）</p>
 <p>在非整點模式，還有三個互動模式：<br>
 ②抒情模式：我們用Led光條發光高低呈現，以光波形做光藝術表演。<br>
