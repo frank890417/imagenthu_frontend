@@ -8,14 +8,22 @@
               v-for="slide in works",
               :style="cssbg(slide.cover)",
               :to="`/works/${currentSlide.id}`")
+        i.fa.fa-angle-left.slide-nav(@click="prev")
+        i.fa.fa-angle-right.slide-nav.right(@click="next")
   .container
     .row
       .col-sm-12
         h1.work-title 
-          
           span {{currentSlide.title}}
-        p.work-description {{currentSlide.description}}
-        .det 0{{currentSlide.id+1}} 
+        .work-description(:key="currentSlide.title")
+          .ovh
+            .use-data-title.animated.fadeInUp.delay-1  
+              i.fa.fa-database
+              | &nbsp;使用數據： {{currentSlide.data}}
+          br
+          br
+          p.animated.fadeIn.delay-5 {{currentSlide.description}}
+        .det 0{{currentSlide.id}} 
   //- .jumbotron(:style="cssbg(works[0].cover)") 大圖
   section.sectionHero
     .container
@@ -90,6 +98,25 @@ slickOptions: {
 <style lang="sass">
 @import "../assets/_mixins.sass"
 .page-works
+  .slide-nav
+    position: absolute
+    top: 50%
+    left: 30px
+    font-size: 100px
+    color: white
+    z-index: 100
+    transform: translateY(-50%)
+    opacity: 0.5
+    cursor: pointer
+    +trans
+    &:hover
+      transform: translateY(-50%) scale(1.1)
+      opacity: 1
+    &.right
+      left: initial
+      right: 30px
+      
+    
   .slides-area
     height: 550px
     margin-bottom: 00px
@@ -102,7 +129,12 @@ slickOptions: {
     cursor: pointer
     +rwd_sm
       height: 300px
-
+  .use-data-title
+    font-weight: bold
+    font-size: 1.4em
+    // margin-top: -20px
+    // margin-bottom: -20px
+    display: block
   .det
     font-size: 420px
     color: $colorOrange
@@ -114,6 +146,13 @@ slickOptions: {
       font-size: 100px
       bottom: 0px
       top: 0px
+  path,polypath
+    stroke-dasharray: 800
+    stroke-dashoffset: 800
+    animation: dash 4s linear both
+  @keyframes dash
+    to 
+      stroke-dashoffset: 0
   a
     position: relative
   .work-title
@@ -125,7 +164,7 @@ slickOptions: {
     position: relative
     display: inline-block
     padding: 5px 20px
-    margin-bottom: 50px
+    margin-bottom: 40px
 
     z-index: 100
   .work-description

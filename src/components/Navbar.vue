@@ -75,6 +75,9 @@ nav.navbar.navbar-expand-lg.navbar-dark
     padding-right: 30px
     background-color: #0C0C0C
 
+  .nav-item
+    padding-left: 20px
+    padding-right: 20px
   .nav-item.active
     border-bottom: 10px solid $colorOrange
     margin-bottom: -10px

@@ -299,6 +299,13 @@ p,li
       background-color: lighten($colorRed,5)
       &:active
         background-color: darken($colorRed,5)
+  &.orange
+    background-color: $colorOrange
+    color: $colorWhite
+    &:hover
+      background-color: lighten($colorOrange,5)
+      &:active
+        background-color: darken($colorOrange,5)
 
 $speed_cb: cubic-bezier(.04,.6,.42,1) 
 .animated
@@ -313,4 +320,10 @@ $speed_cb: cubic-bezier(.04,.6,.42,1)
     transform: translateY(0px)
 .floatInUp
   animation-name: floatInUp
+
+@for $i from 1 through 50
+  .delay-ani-#{$i}
+    animation-delay: #{$i/10}s
+.ovh
+  overflow: hidden
 </style>

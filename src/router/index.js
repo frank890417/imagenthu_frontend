@@ -7,11 +7,14 @@ import PageMap from '@/components/PageMap'
 import PageContact from '@/components/PageContact'
 import PageWorks from '@/components/PageWorks'
 import PageWorksIndep from '@/components/PageWorksIndep'
+import PageWorksIndepData from '@/components/PageWorksIndepData'
 import PageTemplate from '@/components/PageTemplate'
 
 Vue.use(Router)
 
 let router =  new Router({
+  // mode: "history",
+  // base: "/THE2018/",
   routes: [
     {
       path: '/template',
@@ -35,6 +38,14 @@ let router =  new Router({
       meta: {
         nopadding: true
       }
+    }, {
+      path: '/works/n/:workname',
+      name: 'PageWorksIndep2',
+      component: PageWorksIndep
+    }, {
+      path: '/works/n/:workname/data',
+      name: 'PageWorksIndepData',
+      component: PageWorksIndepData
     },{
       path: '/works/:id',
       name: 'PageWorksIndep',

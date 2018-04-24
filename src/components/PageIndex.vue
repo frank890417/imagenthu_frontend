@@ -9,7 +9,7 @@
           //- h4.orange  + + + + + + +  - - - -   - - -  + +
         .col-sm-12.flex-center.animated.fadeIn
           img.title(src="static/img/siteimage_cover.svg")
-        .col-sm-12.flex-center.animated.fadeIn
+        .col-sm-12.flex-center.animated.fadeIn.buttons
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
           //- .btn.btn-primary 展覽介紹
@@ -31,6 +31,13 @@ export default {
     var wh = window.outerHeight
     canvas.width = ww
     canvas.height = wh
+    window.addEventListener("resize",()=>{
+
+      ww = window.outerWidth
+      wh = window.outerHeight
+      canvas.width = ww
+      canvas.height = wh
+    })
     // var value2d = simplex.noise2D(x, y)
     var mousePos = {x: 0,y: 0}
     window.addEventListener("mousemove",function(mpos){
@@ -119,6 +126,9 @@ export default {
   color: white
   canvas
     pointer-events: none
+  .buttons
+    position: relative
+    z-index: 100
   .btn.btn-primary
     border: solid 1px transparent
     background-color: #222

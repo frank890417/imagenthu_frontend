@@ -4,7 +4,7 @@
       .container
         .row
           .col-sm-12
-            h1.title 策展團隊
+            //h1.title 策展團隊
     //section 
       .container
         .row
@@ -16,17 +16,29 @@
     //- br
     //- br
     //- br
-    .jumbotron(:style="cssbg('http://techart.nthu.edu.tw/wp-content/uploads/2017/12/mainImage1229.png')")
-    section 
+    //.jumbotron(:style="cssbg('http://techart.nthu.edu.tw/wp-content/uploads/2017/12/mainImage1229.png')")
+    section.mt-offset-5
+      //- img(src="http://techart.nthu.edu.tw/wp-content/uploads/2018/04/THE2018-460x270.jpg")
       .container
-        h4.color.orange.text-center Research Center for Technology  and  Art
-        h1.text-center 清華學院 科技藝術研究中心 
+        .row
+          .col-sm-12
+            br
+            br
+            h4.color.orange.text-center Research Center for Technology and Art
+            h1.text-center 清華學院 科技藝術研究中心
+          .col-sm-8.offset-sm-2
+
+            h3.text-center 〝ART & TECHNOLOGY - When Artists And Engineers Work Together, The Result is Something Neither Can Expect.〞
       .container-fluid
         img
       .container
         .row
-          .col-sm-6
-            p 整合校內外科技與藝術之跨領域專業與資源，推動「數位藝術」、「數位文創」、「科技創新應用」三方面的學術研究、教育推廣、產學合作與國際交流等，並致力於數位跨域創作、數位文創促進以及科技創新激發。<br>中心任務<br>整合本校科技與藝術相關單位之跨領域資源，做為校內外跨域合作平台。<br>規劃與執行科技藝術之各項研究計畫與藝術創作。<br>規劃與支援科技藝術之跨域課程以及人才培育。<br>規劃與舉辦校內科技藝術相關活動以及推廣國際交流。<br>規劃與委製國內外科技藝術文創活動。
+          .col-sm-8.offset-sm-2
+            p.text-center 這是 1998年 7月 IEEE Spectrum 雜誌封面上的一句話，該期雜誌一刊出，宣告了藝術與科技整合時代里程碑來臨了，而且已成了全球共同重視的課題。清華大學是國際知名以科學、科技稱著的大學，科學與科技的硬實力在臺灣學術與產業界早已奠定深厚根基，但在發展橫向的跨域整合研究與創作人才培育上仍闕如。為推動本校科技與藝術的結合，以及創造清華「科技藝術跨域的新 DNA」與「科技藝術跨域的新文化」，清華大學藝術學院成立院學士班培養科技藝術跨域人才，清華學院也成立「科技藝術研究中心」，主要目的整合校內外跨領域專業與資源，推動「數位藝術」、「數位文創」、「科技創新應用」三方面的學術研究、教育推廣、產學合作與國際交流等，並致力於數位跨域轉繹創作、數位文創促進以及科技創新激發。
+
+
+
+
 
           .col-sm-6
 </template>

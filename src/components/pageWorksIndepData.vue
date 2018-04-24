@@ -5,35 +5,25 @@
       .row
         .col-sm-12
       .row
-        .col-sm-12
+        .col-sm-6
           .cover(:style="cssbg(work.cover)")
 
-            router-link.btn-back(to="/works") 
+            router-link.btn-back(:to="'/works/n/'+work.key") 
               i.fa.fa-angle-left
-              span  返回
-      .row
-        .col-sm-5
+              span  查看作品說明
+        .col-sm-6
           br
           br
           h2
             SvgInline.logo(:src="work.logo")
-            span {{work.title}}
-            span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;{{work.sponsor}}
-
+            span 〈{{work.title}}〉 
+          h3 使用數據說明
+          hr
           p(v-html="work.description")
           br
-          router-link.btn.orange(:to="'/works/n/'+work.key+'/data'") 大數據說明
           br
           br
-          br
-        .col-sm-7
-          br
-          br
-          h3 藝術家 - {{work.author}}
-          p(v-html="work.author_description")
-          br
-          h3 資料介紹 - {{work.data}}
-          p(v-html="work.description")
+          
 
             
 </template>

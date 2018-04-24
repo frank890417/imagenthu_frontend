@@ -1,12 +1,14 @@
 <template lang="pug">
-router-link.workbox(:to="'/works/'+work.id")
+router-link.workbox(:to="'/works/n/'+work.key")
   .cover(:style="cssbg(work.cover)")
   .container-fluid
     .row
-      .col-sm-4
+      .col-4
         SvgInline.logo(:src="work.logo")
-      .col-sm-8
-        h2 {{work.title}}
+      .col-8
+        h2 
+          span(v-if="num") {{num}}
+          span {{work.title}}
         h4 
           //- i.fa.fa-user
           span {{work.author}}
@@ -22,7 +24,7 @@ import {mapState,mapMutations,mapActions} from 'vuex'
 import $ from 'jquery'
 
 export default {
-  props: ['work'],
+  props: ['work','num'],
   data(){
     return {
       
