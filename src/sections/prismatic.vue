@@ -3,14 +3,18 @@
   .container.text-center
     .row
       .col-sm-12
-        h1 光譜原色 APP
+        br
+        h1 光譜原色，請大家來攻城點燈
+        h3 一次點一個！
         br
     .row
       .col-sm-4.animated.fadeIn(v-for="cry in [crystals[0],crystals[2],crystals[4]]",
                 v-if="cry",
                 :class="'delay_ani_'+cry.id*2")
         div.rock_container
+          br
           h3 ID: {{cry.id}}
+          //- h3 {{names[cry.id]}}
           SvgInline.rockimg.animated.zoomIn.delay-ani-10(
             :src="'static/img/prismatic_rock'+cry.id+'.svg'",
             :class="'delay_ani_'+cry.id*2")
@@ -22,7 +26,9 @@
                 v-if="cry",
                 :class="'delay_ani_'+cry.id*2")
         div.rock_container
+          br
           h3 ID: {{cry.id}}
+          //- h3 {{names[cry.id]}}
           SvgInline.rockimg.animated.zoomIn.delay-ani-10(
             :src="'static/img/prismatic_rock'+cry.id+'.svg'",
             :class="'delay_ani_'+cry.id*2")
@@ -74,7 +80,15 @@ export default {
         crystals: [],
         panelAskOpen: false,
         nowBlock: null,
-        statusText: ""
+        statusText: "",
+        names: [
+          "",
+          "綠島",
+          "澎湖島",
+          "金門島",
+          "蘭嶼島",
+          "龜山島"
+        ]
       }
     },
     computed: {
