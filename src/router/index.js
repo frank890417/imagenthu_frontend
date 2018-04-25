@@ -10,6 +10,8 @@ import PageWorksIndep from '@/components/PageWorksIndep'
 import PageWorksIndepData from '@/components/PageWorksIndepData'
 import PageTemplate from '@/components/PageTemplate'
 
+import SectionHohoho from '@/sections/hohoho'
+
 Vue.use(Router)
 
 let router =  new Router({
@@ -71,6 +73,10 @@ let router =  new Router({
       path: '/contact',
       name: 'PageContact',
       component: PageContact
+    }, {
+      path: '/hohoho',
+      name: 'SectionHohoho',
+      component: SectionHohoho
     }
   ]
 })
