@@ -11,7 +11,7 @@ import PageWorksIndepData from '@/components/PageWorksIndepData'
 import PageTemplate from '@/components/PageTemplate'
 
 import SectionHohoho from '@/sections/hohoho'
-
+import SectionPrismatic from '@/sections/prismatic'
 Vue.use(Router)
 
 let router =  new Router({
@@ -77,6 +77,10 @@ let router =  new Router({
       path: '/hohoho',
       name: 'SectionHohoho',
       component: SectionHohoho
+    }, {
+      path: '/prismatic',
+      name: 'SectionPrismatic',
+      component: SectionPrismatic
     }
   ]
 })

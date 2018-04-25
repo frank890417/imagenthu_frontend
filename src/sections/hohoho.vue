@@ -3,7 +3,7 @@
   .container.text-center
     .row
       .col-sm-12
-        h1 侯太太derAPP
+        h1 侯王淑昭與清華園的邂逅
         br
 
       .col-sm-12
@@ -13,6 +13,7 @@
                   :style="bgcss(block.img)",
                   @click="openFull(block)",
                   :class="'delay-'+(cid*5+blockId)")
+              
   transition(name="fade")
     .fullpageInput(v-if="panelAskOpen",
                   :class="{active: panelAskOpen}")
@@ -24,11 +25,13 @@
               img.img(:src="nowBlock.img")
             .col-sm-8.fadeIn.animated.delay-3.text-left
               h2 {{nowBlock.id}}
-              h3 覺得這塊像是清大的什麼呢？
+              h3 請問這圖案你聯想到清華的什麼呢？
               h5 {{statusText}}
               textarea(v-model="nowBlock.comment")
               br
-              button.btn.btn-primary(@click="submit(nowBlock)") 送出感想
+              button.btn.btn-primary(@click="submit(nowBlock)") 送出聯想
+              span &nbsp;
+              button.btn.btn-secondary(@click="panelAskOpen=false") 關閉
 
 </template>
 
@@ -47,7 +50,7 @@ export default {
         blocks: Array.from({length: 25},(d,i)=>{
           return {
             id: i+1,
-            img: "/static/img/hohoho/"+ ("0"+(i+1)).slice(-2)+".png"
+            img: "static/img/hohoho/"+ ("0"+(i+1)).slice(-2)+".png"
           }
         }),
         panelAskOpen: false,
@@ -83,7 +86,7 @@ export default {
     watch:{
       panelAskOpen(){
         
-        socket.emit(this.panelAskOpen?'edit_start':'edit_end')
+        socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
       }
     }
 }
@@ -96,7 +99,13 @@ export default {
   padding-top: 50px
   .blocks-panel
     +flexCenter
+    border: solid 20px rgba(white,0.05)
     flex-direction: column
+    display: inline-block
+    +trans
+    &:hover
+      border: solid 20px rgba(white,0.2)
+      
   .blockrow
     display: flex
     
@@ -113,6 +122,9 @@ export default {
     transition: 0.5s
     background-size: cover
     background-position: center center
+    transform-rogin: center center
+    &:hover
+      transform: scale(1.02)
     +rwd_sm
       +size(80px)
     &:hover
@@ -146,6 +158,10 @@ export default {
     .img
       width: 100%
       margin-top: 30px
+      +trans
+      transform-origin: center center
+      &:hover
+        transform: scale(1.02)
       +rwd_sm
         width: 60%
         margin: auto
