@@ -9,6 +9,8 @@ import SvgInline from './components/SvgInline.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 
+window.MediaRecorder = require('audio-recorder-polyfill')
+
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'

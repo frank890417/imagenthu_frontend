@@ -41,9 +41,9 @@ import _ from 'lodash'
 //     "force new connection" : true,
 //     "reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
 //     "timeout" : 10000, //before connect_error and connect_timeout are emitted.
-//     "transports" : ["websocket"]
+//     "transports" : ["webthis.socket"]
 // };
-var socket = io("https://awiclass.monoame.com:3030");
+
 export default {
     data() {
       return {
@@ -55,7 +55,8 @@ export default {
         }),
         panelAskOpen: false,
         nowBlock: null,
-        statusText: ""
+        statusText: "",
+        socket: null
       }
     },
     computed: {
@@ -74,7 +75,7 @@ export default {
         this.nowBlock=block
       },
       submit(block){
-        socket.emit('comment',block)
+        this.socket.emit('comment',block)
         this.statusText="送出回覆中..."
         setTimeout(()=>{
           this.statusText=""
@@ -86,8 +87,12 @@ export default {
     watch:{
       panelAskOpen(){
         
-        socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
+        this.socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
       }
+    },
+    mounted(){
+      this.socket = io("https://awiclass.monoame.com:3030");
+
     }
 }
 </script>

@@ -21,6 +21,9 @@
                 SvgInline.logo.animated.zoomIn.delay-ani-2(:src="work.logo")
               .col-9
                 span {{work.title}}
+                router-link.btn.float-right.btn-app(:to="work.appRoute" v-if="work.appRoute")
+                  i.fa.fa-mobile
+                  span &nbsp;APP
                 span.sponsor(v-if="work.sponsor") &nbsp;&nbsp;<br>{{work.sponsor}}
           .hide-mobile
             h3 作品意涵
@@ -48,7 +51,9 @@
                             :to="'/works/n/'+work.key") 
               i.fa.fa-user
               span &nbsp;作品與作者
-            router-link.btn(:to="work.appRoute" v-if="work.appRoute") APP
+            router-link.btn(:to="work.appRoute" v-if="work.appRoute")
+              i.fa.fa-mobile
+              span &nbsp;APP
           div.panel-info(v-if="$route.meta.type=='description'").animated.fadeIn
             .show-mobile
               h3 作品意涵
@@ -182,6 +187,16 @@ export default {
     font-size: 1.3rem
     margin-top: 20px
 
+  .btn-app
+    margin-top: 10px
+    padding: 5px 10px
+    cursor: pointer
+    background-color: rgba(#fff,0.8)
+    color: #222
+    display: block
+    float: right
+    &:hover
+      background-color: rgba(#fff,0.9)
 
   .use_data_box
     padding: 10px 15px

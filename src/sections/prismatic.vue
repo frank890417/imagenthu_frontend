@@ -71,23 +71,40 @@ import $ from 'jquery'
 //     "force new connection" : true,
 //     "reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
 //     "timeout" : 10000, //before connect_error and connect_timeout are emitted.
-//     "transports" : ["websocket"]
+//     "transports" : ["webthis.socket"]
 // };
-var socket = io("https://awiclass.monoame.com:3030");
 export default {
     data() {
       return {
-        crystals: [],
+        crystals: [
+          {
+            id: 1,
+            color: "rgb(30,30,30)"
+          },
+          {
+            id: 2,
+            color: "rgb(30,30,30)"
+          },{
+            id: 3,
+            color: "rgb(30,30,30)"
+          },{
+            id: 4,
+            color: "rgb(30,30,30)"
+          },{
+            id: 5,
+            color: "rgb(30,30,30)"
+          }
+        ],
         panelAskOpen: false,
         nowBlock: null,
         statusText: "",
         names: [
           "",
-          "綠島",
-          "澎湖島",
-          "金門島",
-          "蘭嶼島",
-          "龜山島"
+          "蘇格貓底",
+          "台達館",
+          "水木清華",
+          "台積館",
+          "旺宏館"
         ]
       }
     },
@@ -107,7 +124,7 @@ export default {
         this.nowBlock=block
       },
       submit(block){
-        socket.emit('comment',block)
+        this.socket.emit('comment',block)
         this.statusText="送出回覆中..."
         setTimeout(()=>{
           this.statusText=""
@@ -115,29 +132,34 @@ export default {
         },1500)
       },
       updateColor(cry){
-        socket.emit("setColor",cry)
+        this.socket.emit("setColor",cry)
 
       }
     },
     watch:{
       panelAskOpen(){
-        socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
+        this.socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
       }
     },
     mounted(){
+      this.socket = io("https://awiclass.monoame.com:3030");
       // axios.get("http://monoame.com:3000/prismatic").then(res=>{
       //   Vue.set(this,"crystals",JSON.parse(res.data))
       // })
-      socket.on("all_prismatic_color",(all)=>{
-        this.$set(this,"crystals",all)
-        setTimeout(()=>{
+      this.socket.on("all_prismatic_color",(all)=>{
+        console.log(all)
+        all.forEach(cry=>{
+          this.crystals.find(c=>c.id==cry.id).color=cry.color
+        })
 
+        setTimeout(()=>{
           all.forEach(c=>{
             $("[data-name='fill_"+c.id+"']").css("fill",c.color)
           })
         },1500)
+
       })
-      socket.on("setColor",(cry)=>{
+      this.socket.on("setColor",(cry)=>{
         this.crystals.find(c=>c.id==cry.id).color=cry.color
         $("[data-name='fill_"+cry.id+"']").css("fill",cry.color)
       })
