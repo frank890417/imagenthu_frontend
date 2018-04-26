@@ -643,7 +643,8 @@ let data = [
 <span class='orange-sub-title'>② 並從我們提供的APP輸入你的想像。</span><br>
 </span></p>
 <p>註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
-註2：請從APP，寫上你對作品圖案與清華的聯想。</p>`
+註2：請從APP，寫上你對作品圖案與清華的聯想。</p>`,
+    appRoute: "/app/hohoho"
   }, {
     id: 1+2,
     key: "PlantingLight",
@@ -687,8 +688,8 @@ let data = [
 ② 參與者從手機APP，可點選三角立錐做點燈互動，然後按 Go「點燈」。<br>
 ③ 所有互動停止10秒後，五個立錐全部又回覆到微亮的初始狀態。<br>
 註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。</p>
-
-    `
+    `,
+    appRoute: "/app/prismatic"
   }, {
     id: 1+4,
     key: "Mushrooms",

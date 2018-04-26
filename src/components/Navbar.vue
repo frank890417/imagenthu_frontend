@@ -70,7 +70,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-dark
   padding-right: 0
   .nav-link
     color: rgba(white,0.8)
-    letter-spacing: 1px
+    letter-spacing: 0.5px
 
   .num
     position: absolute

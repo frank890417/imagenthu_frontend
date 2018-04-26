@@ -17,8 +17,13 @@ Vue.use(ElementUI)
 
 Vue.component("SvgInline", SvgInline)
 import "slick-carousel/slick/slick.css"
+
 import SectionFooter from './components/sectionFooter'
 Vue.component("SectionFooter", SectionFooter)
+
+import FullPage from './components/FullPage'
+Vue.component("FullPage", FullPage)
+
 import Navbar from './components/Navbar'
 Vue.component("Navbar", Navbar)
 

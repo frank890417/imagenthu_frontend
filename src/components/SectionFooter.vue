@@ -24,7 +24,7 @@
           //- h1 印象清華
           img.title(src="static/img/title.svg")
         .col-sm-3
-          ul
+          //ul
             li
               router-link(to="/about") 展覽介紹
             li

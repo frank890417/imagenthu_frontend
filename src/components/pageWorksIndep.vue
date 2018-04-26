@@ -11,7 +11,7 @@
             router-link.btn-back(to="/works") 
               i.fa.fa-angle-left
               span  返回
-
+          
         .col-sm-5
           br
           br
@@ -48,6 +48,7 @@
                             :to="'/works/n/'+work.key") 
               i.fa.fa-user
               span &nbsp;作品與作者
+            router-link.btn(:to="work.appRoute" v-if="work.appRoute") APP
           div.panel-info(v-if="$route.meta.type=='description'").animated.fadeIn
             .show-mobile
               h3 作品意涵
@@ -78,7 +79,7 @@
           router-link.nav-item(v-for="work in works", :to="'/works/n/'+work.key")
             img(:src="work.logo")
             .nav-title {{work.title}}
-      
+        
             
 </template>
 
@@ -89,6 +90,7 @@ import $ from 'jquery'
 export default {
   data(){
     return {
+      fullpageOpen: false
     }
   },
   mounted(){

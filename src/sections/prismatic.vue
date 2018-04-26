@@ -4,7 +4,7 @@
     .row
       .col-sm-12
         br
-        h1 光譜原色，請大家來攻城點燈
+        h1 光譜原色，請大家來點燈
         h3 一次點一個！
         br
     .row
@@ -13,8 +13,8 @@
                 :class="'delay_ani_'+cry.id*2")
         div.rock_container
           br
-          h3 ID: {{cry.id}}
-          //- h3 {{names[cry.id]}}
+          //- h3 ID: 0{{cry.id}}
+          h3 {{names[cry.id]}}
           SvgInline.rockimg.animated.zoomIn.delay-ani-10(
             :src="'static/img/prismatic_rock'+cry.id+'.svg'",
             :class="'delay_ani_'+cry.id*2")
@@ -27,8 +27,8 @@
                 :class="'delay_ani_'+cry.id*2")
         div.rock_container
           br
-          h3 ID: {{cry.id}}
-          //- h3 {{names[cry.id]}}
+          //- h3 ID: 0{{cry.id}}
+          h3 {{names[cry.id]}}
           SvgInline.rockimg.animated.zoomIn.delay-ani-10(
             :src="'static/img/prismatic_rock'+cry.id+'.svg'",
             :class="'delay_ani_'+cry.id*2")
@@ -135,7 +135,7 @@ export default {
           all.forEach(c=>{
             $("[data-name='fill_"+c.id+"']").css("fill",c.color)
           })
-        },500)
+        },1500)
       })
       socket.on("setColor",(cry)=>{
         this.crystals.find(c=>c.id==cry.id).color=cry.color

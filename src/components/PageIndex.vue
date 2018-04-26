@@ -10,7 +10,7 @@
         .col-sm-12.flex-center.animated.fadeIn.flex-direction-column
           img.title(src="static/img/siteimage_cover.svg")
           br
-          h3 4/29啟動「大數據」QRCode 密碼，獎品等你拿！
+          h4 4/29啟動「大數據」QRCode 密碼，獎品等你拿！
         //.col-sm-12.flex-center.animated.fadeIn.buttons
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
@@ -171,6 +171,9 @@ export default {
       max-width: 120%
   h1
     font-size: 70px
+  h4
+    position: relative
+    z-index: 100
 
   canvas.index
     position: fixed

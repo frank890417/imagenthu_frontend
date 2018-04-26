@@ -81,6 +81,14 @@ let router =  new Router({
       path: '/prismatic',
       name: 'SectionPrismatic',
       component: SectionPrismatic
+    }, {
+      path: '/app/hohoho',
+      name: 'SectionHohoho',
+      component: SectionHohoho
+    }, {
+      path: '/app/prismatic',
+      name: 'SectionPrismatic',
+      component: SectionPrismatic
     }
   ]
 })
