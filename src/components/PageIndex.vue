@@ -11,6 +11,7 @@
           img.title(src="static/img/siteimage_cover.svg")
           br
           h4 4/29啟動「大數據」QRCode 密碼，獎品等你拿！
+            router-link.btn.red(to="/news") 查看資訊
         //.col-sm-12.flex-center.animated.fadeIn.buttons
           router-link.btn.btn-primary(to="/about") 展覽介紹
           router-link.btn.btn-primary(to="/works") 作品一覽
@@ -29,14 +30,14 @@ export default {
   mounted(){
   var canvas = document.querySelector("canvas.index")
     var ctx = canvas.getContext("2d")
-    var ww = window.outerWidth
-    var wh = window.outerHeight
+    var ww = $(window).width()
+    var wh = $(window).height()
     canvas.width = ww
     canvas.height = wh
     window.addEventListener("resize",()=>{
 
-      ww = window.outerWidth
-      wh = window.outerHeight
+      ww = $(window).width()
+      wh = $(window).height()
       canvas.width = ww
       canvas.height = wh
     })
@@ -66,7 +67,7 @@ export default {
         for(var i=0;i<ww;i++){
           let yy = simplex.noise3D(i/800,mousePos.x/400,tt+mousePos.y/450)
           // console.log(yy)
-          ctx.lineTo( i, wh/2+50+60*yy +ypan) 
+          ctx.lineTo( i, wh/2+100+60*yy +ypan) 
         }
         ctx.lineTo(ww,wh)
         ctx.lineTo(0,wh)
@@ -126,6 +127,8 @@ export default {
   box-sizing: border-box
   background-color: white
   color: white
+  .btn.red
+    background-color: $colorOrange
   .flex-direction-column
     flex-direction: column
   canvas

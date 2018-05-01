@@ -1,13 +1,30 @@
 <template lang="pug">
-.section-hohoho
+.section-hohoho(:class="mode")
   .container.text-center
-    .row
+    .row(v-if="mode=='page'")
       .col-sm-12
         br
-        h1 光譜原色，請大家來點燈
-        h3 一次點一個！
+        h1 光譜原色 APP
+        h3 為湖上的晶體染上色彩
+        h5 p.s. 一次點一個！
         br
-    .row
+    .row(v-if="mode=='block'")
+      .col-4.animated.fadeIn(v-for="cry in crystals",
+                v-if="cry",
+                :class="'delay_ani_'+cry.id*2")
+        div.rock_container
+          br
+          //- h3 ID: 0{{cry.id}}
+          h5 {{names[cry.id]}}
+          SvgInline.rockimg.animated.zoomIn.delay-ani-10(
+            :src="'static/img/prismatic_rock'+cry.id+'.svg'",
+            :class="'delay_ani_'+cry.id*2")
+      .col-12
+        br
+        br
+        p(v-html="statusText", :key="statusText").animated.fadeOut.delay-ani-30
+        .cb(:style="{'background-color': latestColor}", :key="statusText").animated.fadeOut.delay-ani-30
+    .row(v-if="mode=='page'")
       .col-sm-4.animated.fadeIn(v-for="cry in [crystals[0],crystals[2],crystals[4]]",
                 v-if="cry",
                 :class="'delay_ani_'+cry.id*2")
@@ -36,7 +53,9 @@
             
              @change="(color)=>{cry.color=color;updateColor(cry)}",
              color-format="rgb")
-          
+      .col-sm-12
+        p(v-html="statusText", :key="statusText").animated.fadeOut.delay-ani-30
+        .cb(:style="{backgroundColor: latestColor}", :key="statusText").animated.fadeOut.delay-ani-30
       //.col-sm-12
         .blocks-panel
           .blockrow(v-for="(chunk,cid) in blockChunk")
@@ -74,8 +93,14 @@ import $ from 'jquery'
 //     "transports" : ["webthis.socket"]
 // };
 export default {
+    props: {
+      mode: {
+        default: "page"
+      }
+    },
     data() {
       return {
+        statusText: "",
         crystals: [
           {
             id: 1,
@@ -105,7 +130,8 @@ export default {
           "水木清華",
           "台積館",
           "旺宏館"
-        ]
+        ],
+        latestColor: "#fff"
       }
     },
     computed: {
@@ -136,13 +162,9 @@ export default {
 
       }
     },
-    watch:{
-      panelAskOpen(){
-        this.socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
-      }
-    },
+
     mounted(){
-      this.socket = io("https://awiclass.monoame.com:3030");
+      this.socket = io("https://awiclass.monoame.com:3030"); 
       // axios.get("http://monoame.com:3000/prismatic").then(res=>{
       //   Vue.set(this,"crystals",JSON.parse(res.data))
       // })
@@ -162,6 +184,8 @@ export default {
       this.socket.on("setColor",(cry)=>{
         this.crystals.find(c=>c.id==cry.id).color=cry.color
         $("[data-name='fill_"+cry.id+"']").css("fill",cry.color)
+        this.statusText="有人剛把<"+this.names[cry.id]+">換成了 "+cry.color
+        this.latestColor=cry.color
       })
       // @active-change="(color)=>{cry.color=color;updateColor(cry)}", 
     }
@@ -172,7 +196,9 @@ export default {
 @import "../assets/_mixins.sass"
 .section-hohoho
   color: white
-  padding-top: 50px
+  &.page
+    padding-top: 50px 
+
   .rock_container
     display: flex
     justify-content: center
@@ -277,4 +303,11 @@ export default {
   @for $i from 1 through 100
     .delay-#{$i}
       animation-delay: #{$i*.1}s
+
+  .cb
+    +size(20px)
+    display: inline-block
+    // margin-right: 30px
+    margin: 10px
+    border: solid 1px white
 </style>

@@ -9,18 +9,16 @@
           h4 留下你的清華印象
           hr
           p(style="max-width: 400px").text-left 生活在清大的你，每天猶豫著學餐要吃什麼，期中考前抱書到旺宏館或系K奮戰，你對清大有著什麼樣的回憶呢？ 
-          h3.status {{result}}
-          h3(v-if="status=='waiting'")
-            i.fa.fa-spinner.animated.rotate.infinite
+          h3.status {{status}}{{result}}
+          //- i.fa.fa-spinner.animated.rotateIn.infinite
+          h3(v-if="status=='轉換中請稍等(約15秒)...'")
+            i.fa.fa-spinner.animated.rotateIn.infinite
           select(v-model="speaker")
             option(v-for='sp in speakers',:value="sp.name") {{sp.label}}
           textarea(v-model="temptext",placeholder="寫下你的清華印象，變成蘑菇的喃喃細語")
           button.textpostbtn(@click="sendText") 送出
           br
-          br
-          br
-          br
-          h3 語音版本印象（錄音）
+          h3.mt-5 語音版本印象（錄音）
           #controls
             button#record(disabled='', autocomplete='off', title='Record')
               svg(viewBox='0 0 100 100')
@@ -79,14 +77,20 @@ export default {
 // {name: "ENG_Tracy",	label: "英文小男孩語音"},
 {name: "TW_LIT_AKoan",	label: "自助餐阿姨的台語"},
 // {name: "TW_SPK_AKoan",	label: "台語女生語音(白話台)"},
-      ]
+      ],
+      socket: null
     }
   },
   methods:{
     sendText(){
       this.status="轉換中請稍等(約15秒)..."
       let _this = this
+      
+      
+      
       var params = new URLSearchParams();
+      
+            
       params.append('string',  this.temptext);
       params.append('speaker',  this.speaker);
       axios.post("https://awiclass.monoame.com/audiodeliver/TTSTool/TTSTOOL/func/TTSConverter.php",params).then(res=>{
@@ -96,16 +100,27 @@ export default {
         let params2 = new URLSearchParams();
         params2.append('url',  res.data);
         params2.append('name', this.temptext);
+
+
+
+        this.socket.emit('convertMushroomAudio',{
+          text:  this.temptext,
+          speaker:   this.speaker,
+          url: res.data,
+        })
+
+
         if (res.data!=""){
           axios.post('https://awiclass.monoame.com/audiodeliver/post_music.php',params2).then(e=>{
             this.status="已成功送出！"
+            setTimeout(()=>{this.status=""},5000)
           // $(".status").text(e.data.slice(-1,0)[0])
           })
           _this.temptext=""
 
         }else{
           this.result="轉換繁忙中，請再試一次！"
-          setTimeout(()=>{this.result=""},1000)
+          setTimeout(()=>{this.result=""},5000)
         }
         _this.status=""
       })
@@ -113,6 +128,8 @@ export default {
   },
 
   mounted(){
+      this.socket = io("https://awiclass.monoame.com:3030");
+
       var bytes = require('bytes')
 
       var EVENTS = ['start', 'stop', 'pause', 'resume']

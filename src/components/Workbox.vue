@@ -55,18 +55,18 @@ export default {
     margin-top: 30px
     +trans
 
-    path
-      stroke-dasharray: 500
-      stroke-dashoffset: 500
-      animation: dash 4s linear both
-    @keyframes dash
-      to 
-        stroke-dashoffset: 0
-    @keyframes rr
-      from
-        r: 0
-      to 
-        r: 7
+    // path
+    //   stroke-dasharray: 500
+    //   stroke-dashoffset: 500
+    //   animation: dash 4s linear both
+    // @keyframes dash
+    //   to 
+    //     stroke-dashoffset: 0
+    // @keyframes rr
+    //   from
+    //     r: 0
+    //   to 
+    //     r: 7
 
   &:hover
     .logo

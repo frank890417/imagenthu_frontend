@@ -1,62 +1,28 @@
 <template lang="pug">
-.section-hohoho
-  .container.text-center
-    .row
-      .col-sm-12
-        h1 侯王淑昭與清華園的邂逅
-        br
-
-      .col-sm-12
-        .blocks-panel
-          .blockrow(v-for="(chunk,cid) in blockChunk")
-            .block.bounceIn.animated(v-for="(block,blockId) in chunk",
-                  :style="bgcss(block.img)",
-                  @click="openFull(block)",
-                  :class="'delay-'+(cid*5+blockId)")
-              
-  transition(name="fade")
-    .fullpageInput(v-if="panelAskOpen",
-                  :class="{active: panelAskOpen}")
-      .close(@click="panelAskOpen=false")
-      .form 
-        .container
-          .row
-            .col-sm-4
-              img.img(:src="nowBlock.img")
-            .col-sm-8.fadeIn.animated.delay-3.text-left
-              h2 {{nowBlock.id}}
-              h3 請問這圖案你聯想到清華的什麼呢？
-              h5 {{statusText}}
-              textarea(v-model="nowBlock.comment")
-              br
-              button.btn.btn-primary(@click="submit(nowBlock)") 送出聯想
-              span &nbsp;
-              button.btn.btn-secondary(@click="panelAskOpen=false") 關閉
+  h2 昨日車流量： 
+    span.fadeIn.animated(:key="carcount") {{carcount}}
 
 </template>
 
 <script>
 import _ from 'lodash'
+import $ from 'jquery'
+// import axios from 'axios'
 // var connectionOptions =  {
 //     "force new connection" : true,
 //     "reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
 //     "timeout" : 10000, //before connect_error and connect_timeout are emitted.
 //     "transports" : ["webthis.socket"]
 // };
-
 export default {
+    props: {
+      mode: {
+        default: "page"
+      }
+    },
     data() {
       return {
-        blocks: Array.from({length: 25},(d,i)=>{
-          return {
-            id: i+1,
-            img: "static/img/hohoho/"+ ("0"+(i+1)).slice(-2)+".png"
-          }
-        }),
-        panelAskOpen: false,
-        nowBlock: null,
-        statusText: "",
-        socket: null
+        carcount: 0
       }
     },
     computed: {
@@ -81,18 +47,24 @@ export default {
           this.statusText=""
           this.panelAskOpen=false;
         },1500)
-      }
-    
-    },
-    watch:{
-      panelAskOpen(){
-        
-        this.socket.emit(this.panelAskOpen?'edit_start':'edit_end',this.nowBlock)
-      }
-    },
-    mounted(){
-      this.socket = io("https://awiclass.monoame.com:3030");
+      },
+      updateColor(cry){
+        this.socket.emit("setColor",cry)
 
+      }
+    },
+
+    mounted(){
+      this.socket = io("https://awiclass.monoame.com:3030"); 
+      // axios.get("http://monoame.com:3000/prismatic").then(res=>{
+      //   Vue.set(this,"crystals",JSON.parse(res.data))
+      // })
+      this.socket.on("set_carcount",(all)=>{
+        console.log(all)
+        this.carcount=all
+
+      })
+      // @active-change="(color)=>{cry.color=color;updateColor(cry)}", 
     }
 }
 </script>
@@ -101,16 +73,39 @@ export default {
 @import "../assets/_mixins.sass"
 .section-hohoho
   color: white
-  padding-top: 50px
+  &.page
+    padding-top: 50px 
+
+  .rock_container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      +size(200px)
+      border-radius: 50%
+      border: 1px solid rgba(white,0.05)
+      +trans
+    &:hover
+      &:before
+        +size(250px)
+        border: 1px solid rgba(white,0.2)
+      .rockimg
+        
+
+  .rockimg
+    max-width: 300px
+    width: 100%
+    flex: 1
+    position: relative
+    z-index: 1
   .blocks-panel
     +flexCenter
-    border: solid 20px rgba(white,0.05)
     flex-direction: column
-    display: inline-block
-    +trans
-    &:hover
-      border: solid 20px rgba(white,0.2)
-      
   .blockrow
     display: flex
     
@@ -127,9 +122,6 @@ export default {
     transition: 0.5s
     background-size: cover
     background-position: center center
-    transform-rogin: center center
-    &:hover
-      transform: scale(1.02)
     +rwd_sm
       +size(80px)
     &:hover
@@ -141,7 +133,6 @@ export default {
     position: fixed
     width: 100%
     height: 100%
-    z-index: 100
     display: flex
     justify-content: center
     align-items: center
@@ -164,10 +155,6 @@ export default {
     .img
       width: 100%
       margin-top: 30px
-      +trans
-      transform-origin: center center
-      &:hover
-        transform: scale(1.02)
       +rwd_sm
         width: 60%
         margin: auto
@@ -185,7 +172,19 @@ export default {
     opacity: 0
 
 
+  svg polygon
+    transition-duration: 0.5s
+    +trans
+
+
   @for $i from 1 through 100
     .delay-#{$i}
       animation-delay: #{$i*.1}s
+
+  .cb
+    +size(20px)
+    display: inline-block
+    // margin-right: 30px
+    margin: 10px
+    border: solid 1px white
 </style>

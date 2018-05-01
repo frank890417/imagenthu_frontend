@@ -156,13 +156,6 @@ slickOptions: {
       font-size: 100px
       bottom: 0px
       top: 0px
-  path,polypath
-    stroke-dasharray: 800
-    stroke-dashoffset: 800
-    animation: dash 4s linear both
-  @keyframes dash
-    to 
-      stroke-dashoffset: 0
   a
     position: relative
   .work-title

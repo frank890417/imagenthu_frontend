@@ -38,17 +38,18 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   mounted(){
     var canvas = document.querySelector("canvas.lines")
     var ctx = canvas.getContext("2d")
-    var ww = window.outerWidth
+    var ww = $(window).width()
     var wh = 300
     canvas.width = ww
     canvas.height = wh
      window.addEventListener("resize",()=>{
 
-      ww = window.outerWidth
+      ww = $(window).width()
       wh = 300
       canvas.width = ww
       canvas.height = wh

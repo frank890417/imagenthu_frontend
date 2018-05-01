@@ -5,6 +5,7 @@ import PageAbout from '@/components/PageAbout'
 import PagePlan from '@/components/PagePlan'
 import PageMap from '@/components/PageMap'
 import PageContact from '@/components/PageContact'
+import PageNews from '@/components/PageNews'
 import PageWorks from '@/components/PageWorks'
 import PageWorksIndep from '@/components/PageWorksIndep'
 import PageWorksIndepData from '@/components/PageWorksIndepData'
@@ -70,6 +71,10 @@ let router =  new Router({
       path: '/plan',
       name: 'PagePlan',
       component: PagePlan
+    }, {
+      path: '/news',
+      name: 'PageNews',
+      component: PageNews
     }, {
       path: '/contact',
       name: 'PageContact',

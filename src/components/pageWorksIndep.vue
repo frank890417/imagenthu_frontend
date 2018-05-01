@@ -71,11 +71,21 @@
             h2
               //SvgInline.logo.animated.zoomIn.delay-ani-2(:src="work.logo")
               //span 〈{{work.title}}〉 
+
+
             h3 
               i.fa.fa-database
               span &nbsp;使用數據說明
 
-              .explain(v-html="work.data_content")
+            //光譜原色APP
+            prismatic(v-if="work.key=='PrismaticColor'", mode="block")
+            //幾何空隙
+            library(v-if="work.key=='GeometricInterspace'")
+            //草原座標
+            quasiland(v-if="work.key=='QuasiLand'")
+            
+            .explain(v-html="work.data_content")
+
   section.sub_nav
     .container
       .col-sm-12
@@ -91,6 +101,9 @@
 <script>
 import {mapState,mapMutations,mapActions} from 'vuex'
 import workbox from '@/components/Workbox'
+import prismatic from '@/sections/prismatic'
+import library from '@/sections/library'
+import quasiland from '@/sections/quasiland'
 import $ from 'jquery'
 export default {
   data(){
@@ -112,7 +125,10 @@ export default {
     
   },
   components: {
-    workbox
+    workbox,
+    prismatic,
+    library,
+    quasiland
   }
 }
 </script>
