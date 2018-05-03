@@ -35,7 +35,7 @@
   section.sectionHero
     .container
       .row
-        workbox.col-md-4.col-sm-12.wow.fadeIn(v-for="w in works", :work="w")
+        workbox.col-md-4.col-sm-12.wow.fadeIn(v-for="w in works", :work="w" :num="wid")
  
 
 </template>

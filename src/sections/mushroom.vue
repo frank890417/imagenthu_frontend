@@ -93,7 +93,7 @@ export default {
             
       params.append('string',  this.temptext);
       params.append('speaker',  this.speaker);
-      axios.post("https://awiclass.monoame.com/audiodeliver/TTSTool/TTSTOOL/func/TTSConverter.php",params).then(res=>{
+      axios.post("https://techart.cc/audiodeliver/TTSTool/TTSTOOL/func/TTSConverter.php",params).then(res=>{
         this.result="轉換成功(ID:"+res.data.split("/").slice(-1)[0].split(".")[0]+")！"
         setTimeout(()=>{this.result=""},5000)
         console.log(res.data)
@@ -111,7 +111,7 @@ export default {
 
 
         if (res.data!=""){
-          axios.post('https://awiclass.monoame.com/audiodeliver/post_music.php',params2).then(e=>{
+          axios.post('https://techart.cc/audiodeliver/post_music.php',params2).then(e=>{
             this.status="已成功送出！"
             setTimeout(()=>{this.status=""},5000)
           // $(".status").text(e.data.slice(-1,0)[0])

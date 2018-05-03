@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import workdata from '@/data/works'
 Vue.use(Vuex)
+import workdata from '@/data/works'
 
 const store = new Vuex.Store({
   state: {

@@ -38,14 +38,13 @@
                 //- router-link.btn.orange.float-right(:to="'/works/n/'+work.key+'/data'") 大數據說明
           br
           br
-        .col-sm-7
+        .col-sm-7(:class="{orange: work=='title'}")
           br
           br
           .btn-group
             router-link.btn(:class="{orange: $route.meta.type=='data'}",
                             :to="'/works/n/'+work.key+'/data'") 
               i.fa.fa-database
-
               span &nbsp;數據說明
             router-link.btn(:class="{orange: $route.meta.type=='description'}",
                             :to="'/works/n/'+work.key") 

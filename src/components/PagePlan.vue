@@ -88,6 +88,7 @@ export default {
   h1
     font-size: 3.2rem
     white-space: nowrap
+
   .jumbotron
     height: 500px
     background-size: cover

@@ -14,6 +14,7 @@
             h4 Tsing Hua Effects 2018 – IoT Technology and Art Festival
             br
             br
+            .btn(@click="change") button
           p.delay-ani-5.animated.floatInUp
             span 物聯網技術近年來在國內外已有廣大應用，但在人文藝術應用仍然闕如。本次展覽將物聯網的資訊偵測與蒐集，結合戶外互動藝術設計設置於清華校園，透過公共藝術、物聯網與清華園大數據，盼能溫故清華記憶，也創造清華新印象。
             br
@@ -45,7 +46,12 @@
 
 <script>
 export default {
+  data(){
 
+  },
+  methods:{
+
+  }
 }
 </script>
 

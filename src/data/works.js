@@ -41,69 +41,61 @@ let data = [
 <p><span>互動情境：<br>
 </span>〈窗〉整點光亮模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）。<br>
 資料，由清華大學教務處招生策略中心提供。</p>
-<p><h4>問題 ① ：106學年度清華大學學生人數（學士+碩+博）最多的前三個學院？</h4><br>
-106 學年度下學期在學總人數統計人多氣勢強！清華前三大學院！</p>
+
+
+<p><h4>問題 ②：106學年度清華大學學士班報到率高的人氣學院？</h4><br>
+(註冊率高於校註冊率的學院)</p>
 <p><!--------------------------------------------------------></p>
 <table style="height: 177px; width: 195.15px;" border="1">
 <tbody>
 <tr>
-<td style="width: 85px; color: black;" bgcolor="yellow" ><span>理學院</span></td>
-<td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>工學院</span></td>
+  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>理學院</span></td>
+  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>工學院</span></td>
 </tr>
 <tr>
-<td style="width: 85px; color: black;" bgcolor="yellow" ><span>電機資訊學院</span></td>
-<td style="width: 82.15px;"><span>人文社會學院</span></td>
+  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>電機資訊學院</span></td>
+  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>人文社會學院</span></td>
 </tr>
 <tr>
-<td style="width: 85px;"><span>原子科學院</span></td>
-<td style="width: 82.15px;"><span>科技管理學院</span></td>
+  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>原子科學院</span></td>
+  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>科技管理學院</span></td>
 </tr>
 <tr>
-<td style="width: 85px;"><span>清華學院</span></td>
-<td style="width: 82.15px;"><span>生命科學院</span></td>
+  <td style="width: 85px;"><span>清華學院</span></td>
+  <td style="width: 82.15px;"><span>生命科學院</span></td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<table style="width: 550.367px;" border="1">
+<table style="width: 546px;" border="1">
 <tbody>
 <tr>
-<td style="width: 42px;"><span>&nbsp;</span></td>
-<td style="width: 10px; text-align: center;"><span>理</span></td>
-<td style="width: 10px; text-align: center;"><span>工</span></td>
-<td style="width: 10px; text-align: center;"><span>電資</span></td>
-<td style="width: 10px; text-align: center;"><span>人社</span></td>
-<td style="width: 10px; text-align: center;"><span>原科</span></td>
-<td style="width: 10px; text-align: center;"><span>科管</span></td>
-<td style="width: 10px; text-align: center;"><span>清華</span></td>
-<td style="width: 10px; text-align: center;"><span>生科</span></td>
+<td style="width: 52.35px; text-align: center;"><span style="font-size: 12px;">&nbsp;</span></td>
+<td style="width: 37.65px; text-align: center;"><span style="font-size: 12px;">全校</span></td>
+<td style="width: 48px; text-align: center;"><span style="color: #fff; font-size: 12px;">理</span></td>
+<td style="width: 45px; text-align: center;"><span style="color: #fff; font-size: 12px;">工</span></td>
+<td style="width: 47px; text-align: center;"><span style="color: #fff; font-size: 12px;">電資</span></td>
+<td style="width: 44px; text-align: center;"><span style="color: #fff; font-size: 12px;">人社</span></td>
+<td style="width: 42px; text-align: center;"><span style="color: #fff; font-size: 12px;">原科</span></td>
+<td style="width: 44px; text-align: center;"><span style="color: #fff; font-size: 12px;">科管</span></td>
+<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">清華</span></td>
+<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">生科</span></td>
 </tr>
 <tr>
-<td style="width: 42px; text-align: center;"><span>大學+碩+博</span><br>
-<span> 在學總人數</span></td>
-<td style="width: 10px; text-align: center;"><span>1584</span></td>
-<td style="width: 10px; text-align: center;"><span>2838</span></td>
-<td style="width: 10px; text-align: center;"><span>2508</span></td>
-<td style="width: 10px; text-align: center;"><span>1256</span></td>
-<td style="width: 10px; text-align: center;"><span>1115</span></td>
-<td style="width: 10px; text-align: center;"><span>1344</span></td>
-<td style="width: 10px; text-align: center;"><span>170</span></td>
-<td style="width: 10px; text-align: center;"><span>753</span></td>
-</tr>
-<tr>
-<td style="width: 42px; text-align: center;"><span>人數比例</span></td>
-<td style="width: 10px; text-align: center;"><span>9.96%</span></td>
-<td style="width: 10px; text-align: center;"><span>17.85%</span></td>
-<td style="width: 10px; text-align: center;"><span>15.77%</span></td>
-<td style="width: 10px; text-align: center;"><span>7.90%</span></td>
-<td style="width: 10px; text-align: center;"><span>7.01%</span></td>
-<td style="width: 10px; text-align: center;"><span>8.45%</span></td>
-<td style="width: 10px; text-align: center;"><span>1.07%</span></td>
-<td style="width: 10px; text-align: center;"><span>4.74%</span></td>
+<td style="width: 52.35px; text-align: center;"><span style="font-size: 12px;">註冊率</span></td>
+<td style="width: 37.65px; text-align: center;"><span style="font-size: 12px;">95.76%</span></td>
+<td style="width: 48px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">98.82%</span></td>
+<td style="width: 45px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">97.12%</span></td>
+<td style="width: 47px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.46%</span></td>
+<td style="width: 44px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.37%</span></td>
+<td style="width: 42px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">97.65%</span></td>
+<td style="width: 44px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.52%</span></td>
+<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">93.88%</span></td>
+<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">89.22%</span></td>
 </tr>
 </tbody>
 </table>
-<p>資料來源：清華大學註冊組&nbsp; <a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">http</a><a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">://</a><a href="http://registra.web.nthu.edu.tw/files/11-1086-1811.php">registra.web.nthu.edu.tw/files/11-1086-1811.php</a></p>
+<p>資料來源：統計處大專校院系所特色及新生註冊率查詢網站<a href="https://stats.moe.gov.tw/enrollweb/Default.aspx">https://stats.moe.gov.tw/enrollweb/Default.aspx</a></p>
 <p>&nbsp;</p>
 `
   }, {
@@ -123,8 +115,8 @@ let data = [
 <span class='orange-sub-title'>① 觀者立於作品前觀賞作品中的25個圖案，想像圖案與清華校園的關係。</span><br>
 <span class='orange-sub-title'>② 並從我們提供的APP輸入你的想像。</span><br>
 </span></p>
-<p>註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
-註2：請從APP，寫上你對作品圖案與清華的聯想。</p>`,
+<p
+註：請從APP，寫上你對作品圖案與清華的聯想。</p>`,
     appRoute: "/app/hohoho"
   }, {
     id: 1+2,
@@ -148,8 +140,9 @@ let data = [
 ③ 數字數據模式有兩種：年代(11)與日期(10)，兩個閃爍光棒代表數字數據的起，一個閃爍光棒代表數字數據的迄。<br>
 &nbsp;範例：<br>
 <img class="alignnone wp-image-1921" src="http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode.jpg" alt="" width="412" height="192" srcset="http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode.jpg 649w, http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode-465x216.jpg 465w" sizes="(max-width: 412px) 100vw, 412px"><br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
-註2：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>`
+註：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）<br><br>5/2-5/3<br>1973 1984 1992 1998 2000 2016
+<br>(工、理、原子科，人文社會，生命科學，電機學院，管理科技、教育、藝術等學院成立年代)<br><br>
+11閃閃0001-1001-0111-0011-0001-1001-1000-0100-0001-1001-1001-0010-0001-1001-1001-1000-0010-0000-0000-0000-0001-0000-0001-0110閃</p>`
   }, {
     id: 1+3,
     key: "PrismaticColor",
@@ -168,7 +161,6 @@ let data = [
 ①&nbsp; 剛開始時，五個湖上的三角立錐微亮狀態。<br>
 ② 參與者從手機APP，可點選三角立錐做點燈互動，然後按 Go「點燈」。<br>
 ③ 所有互動停止10秒後，五個立錐全部又回覆到微亮的初始狀態。<br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。</p>
     `,
     appRoute: "/app/prismatic"
   }, {
@@ -211,8 +203,7 @@ let data = [
     data_content: `<p><span class='orange-sub-title'>互動情境：<span>（整點模式）</span></span><br>
 ① 立體矩形，Led以彩色發光，代表整點數據呈現。<br>
 ②每一邊燈管亮代表15人進圖書館，一個立體矩形全亮，代表當天約210人進圖書館。若三個立體矩形全亮，則代表當天約 630人進圖書館。<br><br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
-註2：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>
+註：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>
 `
   }, {
     id: 1+6,
@@ -229,8 +220,7 @@ let data = [
     author_description: "林靖祐，建築照明設計師，「沁弦‧築影」設計總監。旅美期間曾參與多項大型國際知名建案照明設計，作品觸角多元，2013年底返臺開業後至今已完成多項建築照明、室內、展場燈光與燈光裝置藝術等作品。對「光」具有專業的理性與感性的敏銳度，認為「光」不僅是功能性的照明，亦可是形塑意象與在地文化結合的藝術。",
     data_content: `<p><span class='orange-sub-title'>互動情境：</span><br>
 ①參觀者坐壓於光椅凳時，影響地板光度與地面光影大小。<br>
-②參觀者坐壓於其中一把光椅凳時，也會影響對面〈英文8-2〉切換至愉悅模式，十個光柱會做隨機多彩發光秀。<br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。</p>`
+②參觀者坐壓於其中一把光椅凳時，也會影響對面〈英文8-2〉切換至愉悅模式，十個光柱會做隨機多彩發光秀。<br>`
   }, {
     id: 1+7,
     key: "English82",
@@ -250,8 +240,7 @@ let data = [
 ②抒情模式：我們用Led光條發光高低呈現，以光波形做光藝術表演。<br>
 ③藝術模式：我們用Led光的閃爍，以光節奏做光藝術表演。<br>
 ④愉悅模式：只要〈力光見影〉有人參與坐壓愉悅舒緩，便可讓〈英文8-2〉切換至愉悅模式，此時Led光柱會做隨機多彩顏色發光。<br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。<br>
-註2：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>`
+註：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>`
   }, {
     id: 1+8,
     key: "QuasiLand",
@@ -267,8 +256,7 @@ let data = [
     author_description: "高德亮，作品常以光作為創作的主要材料，探討著科技發展產生的空間感知與觀看經驗的流變。在日趨同質化與複製化的生活環境中，試圖透過創作的介入與物件的借用，提出有別於日常的感知經驗，並透過「隨機」、「混亂」、「無序」等關鍵詞的思考作為突破日常生活經驗的主要手段。",
     data_content: `<p><span class='orange-sub-title'>互動情境：</span><br>
 ①清華南門車輛流量，流量越大啟動了鐳射光的束量。<br>
-②〈風極體〉隨風搖曳與閃爍發光越大，影響鐳射光發射頻率，激發雷射光蠕蟲活力越大。<br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。</p>`
+②〈風極體〉隨風搖曳與閃爍發光越大，影響鐳射光發射頻率，激發雷射光蠕蟲活力越大。<br>`
   }, {
     id: 1+9,
     key: "Windiode",
@@ -284,8 +272,7 @@ let data = [
     author_description: "施惟捷，媒體藝術工作者、材料研究者。2011起開始專注在電子織品的材料上，其穿戴式作品陸續在各國際電子織品和創客平臺上受到關注和邀約。作品「雷射染／Laser Dye」利用雷射感光放大傳統攝影沖洗底片過程，將光的物理特性作更深部的解構，並運用在視覺藝術上和成衣印花的數位製造上。曾擔任臺灣電子織品與民族織品合作平臺－「部落對抗機器」活動的主辦人，探索新媒體如何在民族社群中做為社會工具之意義。",
     data_content: `<p><span class='orange-sub-title'>互動情境：</span><br>
 ①風靜，風極體直豎、Led燈不閃爍；風越大，風極體隨風搖曳、Led燈閃爍不停。<br>
-②風極體，隨風搖曳、Led隨風閃爍，會影響〈草原座標〉雷射光蠕蟲的活動力。<br>
-註1：請填上你的學號與聯絡電話，作為未來抽獎時聯繫。</p>`
+②風極體，隨風搖曳、Led隨風閃爍，會影響〈草原座標〉雷射光蠕蟲的活動力。<br>`
   }
 ]
 
