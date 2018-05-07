@@ -18,6 +18,13 @@
                   p {{work.data}}
           .col-sm-7
             img(src="static/img/nthumap.svg")
+            h3.mt-5 物聯網架構圖
+            a(href="static/img/網路架構圖2.png",
+              style="background-color: white",
+              target="_blank")
+              img(src="static/img/網路架構圖2.png",
+                  style="width: 100%;")
+
 </template>
 
 <script>

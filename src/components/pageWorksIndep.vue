@@ -85,6 +85,11 @@
             
             .explain(v-html="work.data_content")
 
+
+            //其他說明
+            DataPlantingLight(v-if="work.key=='PlantingLight'")
+            
+
   section.sub_nav
     .container
       .col-sm-12
@@ -103,6 +108,7 @@ import workbox from '@/components/Workbox'
 import prismatic from '@/sections/prismatic'
 import library from '@/sections/library'
 import quasiland from '@/sections/quasiland'
+import DataPlantingLight from '@/datasection/DataPlantingLight'
 import $ from 'jquery'
 export default {
   data(){
@@ -127,7 +133,8 @@ export default {
     workbox,
     prismatic,
     library,
-    quasiland
+    quasiland,
+    DataPlantingLight
   }
 }
 </script>

@@ -140,9 +140,7 @@ let data = [
 ③ 數字數據模式有兩種：年代(11)與日期(10)，兩個閃爍光棒代表數字數據的起，一個閃爍光棒代表數字數據的迄。<br>
 &nbsp;範例：<br>
 <img class="alignnone wp-image-1921" src="http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode.jpg" alt="" width="412" height="192" srcset="http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode.jpg 649w, http://techart.nthu.edu.tw/wp-content/uploads/2018/04/03_Light-barcode-465x216.jpg 465w" sizes="(max-width: 412px) 100vw, 412px"><br>
-註：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）<br><br>5/2-5/3<br>1973 1984 1992 1998 2000 2016
-<br>(工、理、原子科，人文社會，生命科學，電機學院，管理科技、教育、藝術等學院成立年代)<br><br>
-11閃閃0001-1001-0111-0011-0001-1001-1000-0100-0001-1001-1001-0010-0001-1001-1001-1000-0010-0000-0000-0000-0001-0000-0001-0110閃</p>`
+註：整點模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）</p>`
   }, {
     id: 1+3,
     key: "PrismaticColor",
