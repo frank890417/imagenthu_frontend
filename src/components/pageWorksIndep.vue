@@ -89,6 +89,9 @@
             //其他說明
             DataPlantingLight(v-if="work.key=='PlantingLight'")
             
+            //其他說明
+            DataTheWindow(v-if="work.key=='TheWindow'")
+            
 
   section.sub_nav
     .container
@@ -109,6 +112,7 @@ import prismatic from '@/sections/prismatic'
 import library from '@/sections/library'
 import quasiland from '@/sections/quasiland'
 import DataPlantingLight from '@/datasection/DataPlantingLight'
+import DataTheWindow from '@/datasection/DataTheWindow'
 import $ from 'jquery'
 export default {
   data(){
@@ -134,7 +138,8 @@ export default {
     prismatic,
     library,
     quasiland,
-    DataPlantingLight
+    DataPlantingLight,
+    DataTheWindow
   }
 }
 </script>

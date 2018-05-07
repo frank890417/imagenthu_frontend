@@ -41,62 +41,6 @@ let data = [
 <p><span>互動情境：<br>
 </span>〈窗〉整點光亮模式（晚上 6:00~6:05, 6:30~6:35, 7:00~7:05, 7:30~7:35 ….&nbsp; 11:00~11:05）。<br>
 資料，由清華大學教務處招生策略中心提供。</p>
-
-
-<p><h4>問題 ②：106學年度清華大學學士班報到率高的人氣學院？</h4><br>
-(註冊率高於校註冊率的學院)</p>
-<p><!--------------------------------------------------------></p>
-<table style="height: 177px; width: 195.15px;" border="1">
-<tbody>
-<tr>
-  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>理學院</span></td>
-  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>工學院</span></td>
-</tr>
-<tr>
-  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>電機資訊學院</span></td>
-  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>人文社會學院</span></td>
-</tr>
-<tr>
-  <td style="width: 85px; color: black;" bgcolor="yellow" ><span>原子科學院</span></td>
-  <td style="width: 82.15px; color: black;" bgcolor="yellow" ><span>科技管理學院</span></td>
-</tr>
-<tr>
-  <td style="width: 85px;"><span>清華學院</span></td>
-  <td style="width: 82.15px;"><span>生命科學院</span></td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<table style="width: 546px;" border="1">
-<tbody>
-<tr>
-<td style="width: 52.35px; text-align: center;"><span style="font-size: 12px;">&nbsp;</span></td>
-<td style="width: 37.65px; text-align: center;"><span style="font-size: 12px;">全校</span></td>
-<td style="width: 48px; text-align: center;"><span style="color: #fff; font-size: 12px;">理</span></td>
-<td style="width: 45px; text-align: center;"><span style="color: #fff; font-size: 12px;">工</span></td>
-<td style="width: 47px; text-align: center;"><span style="color: #fff; font-size: 12px;">電資</span></td>
-<td style="width: 44px; text-align: center;"><span style="color: #fff; font-size: 12px;">人社</span></td>
-<td style="width: 42px; text-align: center;"><span style="color: #fff; font-size: 12px;">原科</span></td>
-<td style="width: 44px; text-align: center;"><span style="color: #fff; font-size: 12px;">科管</span></td>
-<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">清華</span></td>
-<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">生科</span></td>
-</tr>
-<tr>
-<td style="width: 52.35px; text-align: center;"><span style="font-size: 12px;">註冊率</span></td>
-<td style="width: 37.65px; text-align: center;"><span style="font-size: 12px;">95.76%</span></td>
-<td style="width: 48px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">98.82%</span></td>
-<td style="width: 45px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">97.12%</span></td>
-<td style="width: 47px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.46%</span></td>
-<td style="width: 44px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.37%</span></td>
-<td style="width: 42px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">97.65%</span></td>
-<td style="width: 44px; text-align: center;"><span style="color: #ff0000; font-size: 12px;">96.52%</span></td>
-<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">93.88%</span></td>
-<td style="width: 48px; text-align: center;"><span style="font-size: 12px;">89.22%</span></td>
-</tr>
-</tbody>
-</table>
-<p>資料來源：統計處大專校院系所特色及新生註冊率查詢網站<a href="https://stats.moe.gov.tw/enrollweb/Default.aspx">https://stats.moe.gov.tw/enrollweb/Default.aspx</a></p>
-<p>&nbsp;</p>
 `
   }, {
     id: 1+1,
@@ -111,7 +55,7 @@ let data = [
     cover: "http://techart.nthu.edu.tw/wp-content/uploads/2018/04/THE2018-sew2.jpg",
     author: "侯王淑昭",
     author_description: "侯王淑昭，1978年創辦「春之藝廊」，影響台灣當代藝術發展深遠；1999年創辦「財團法人春之文化基金會」，同年創立「橘園國際藝術策展公司」策劃規劃國內公共藝術案；2012年創設「財團法人東和鋼鐵文化基金會」，邀請國內外藝術家進駐廠區創作，締造藝術與工業的全新連結。侯王女士的藝術實踐顯露出她對藝術的熱情與堅持，同時亦積極關注台灣現當代藝術發展，進而擔任當代藝術基金會董事長，積極活動於國際性組織如亞洲文化協會和國家文化藝術基金會等，鼓勵藝術家、策展人參與國際交流；於2015年獲教育部頒贈「社教貢獻獎」。",
-    data_content: `<p><span class='orange-sub-title'><span class='orange-sub-title'>互動情境：</span><br>
+    data_content: `<p><span class='orange-sub-title'><span class='orange-sub-title'><h3>互動情境：</h3></span><br>
 <span class='orange-sub-title'>① 觀者立於作品前觀賞作品中的25個圖案，想像圖案與清華校園的關係。</span><br>
 <span class='orange-sub-title'>② 並從我們提供的APP輸入你的想像。</span><br>
 </span></p>

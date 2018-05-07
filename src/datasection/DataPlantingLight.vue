@@ -2,6 +2,7 @@
 div
   h3(v-html="'目前資料：'+nowdata.title")
   p(v-html="process(nowdata.value)")
+
   //- p(v-for="d in alldata") {{d.start_date}}  {{d.end_date}} :{{dateInRange(d.start_date,d.end_date)}}
 </template>
 
