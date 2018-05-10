@@ -87,13 +87,15 @@ export default {
         console.log(item)
       },
       getRelated(obj){
+        //取得字首
         var start = obj.word[0]
         var cata = obj.cata
         var result = this.lista.filter(item=>item.cata==cata)
                         .filter(item=>item.word.indexOf(start)==0)
-      .slice()
-      .sort((a,b)=>Math.random()>0.5 )
-      .slice(0,4)
+                        .filter(item=>item.word!=obj.word)
+                        .slice()
+                        .sort((a,b)=>Math.random()>0.5 )
+                        .slice(0,4)
 
         var objcopy = JSON.parse(JSON.stringify(obj))
         objcopy.correct=true
