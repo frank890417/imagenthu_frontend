@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   h3 {{ nowdata.title }}
-  h4 {{ nowdata.explain }} ( {{  nowdata.start_date}}-{{nowdata.end_date}} )
+  p {{ nowdata.explain }} ( {{  nowdata.start_date}}-{{nowdata.end_date}} )
   br
   br
   .window
@@ -32,7 +32,7 @@ export default {
             end_date: "5/1",
             title: "問題 ① ：106學年度清華大學學生人數（學士+碩+博）最多的前三個學院？",
             explain: "106 學年度下學期在學總人數統計人多氣勢強！清華前三大學院！",
-            table: "/static/img/tables/table1.png",
+            table: "static/img/tables/table1.png",
             active: ["理學院","工學院","電機資訊學院"],
             source: "資料來源：清華大學註冊組  http://registra.web.nthu.edu.tw/files/11-1086-1811.php"
           },
@@ -41,7 +41,7 @@ export default {
             end_date: "5/3",
             title: "問題 ②：106學年度清華大學學士班報到率高的人氣學院？",
             explain: "(註冊率高於校註冊率的學院)",
-            table: "/static/img/tables/table2.png",
+            table: "static/img/tables/table2.png",
             active: [
               "理學院",
               "工學院",
@@ -57,7 +57,7 @@ export default {
             end_date: "5/5",
             title: "問題 ③：106學年度清華大學具多管齊下的入學管道的學院？",
             explain: "（入學管道多元的學院，學生組成包含繁星推薦、個人申請、考試分發與特殊選才等四個管道）",
-            table: "/static/img/tables/table3.png",
+            table: "static/img/tables/table3.png",
             active: [
               "理學院",
               "工學院",
@@ -73,7 +73,7 @@ export default {
             end_date: "5/8",
             title: "問題 ④：105學年度清華大學各學院學生最能呈現全臺區域人口縮影的學院？",
             explain: "（學生組成最接近臺灣人口分布的學院）",
-            table: "/static/img/tables/table4.png",
+            table: "static/img/tables/table4.png",
             active: [
               "理學院","電機資訊學院"
 
@@ -87,7 +87,7 @@ export default {
             end_date: "5/10",
             title: "問題 ⑤：105 學年度學生來源高中數最廣泛的前三個學院？",
             explain: "",
-            table: "/static/img/tables/table5.png",
+            table: "static/img/tables/table5.png",
             active: [
               "理學院","原子科學院","生命科學院"
             ],
@@ -100,7 +100,7 @@ export default {
             end_date: "5/12",
             title: "問題 ⑥：106 學年度下學期僑外生在學人數統計最國際化的五個學院？",
             explain: "（全校僑外生比例約5.99%）",
-            table: "/static/img/tables/table6.png",
+            table: "static/img/tables/table6.png",
             active: [
               "理學院","人文社會學院","科技管理學院","清華學院","生命科學院"
             ],
@@ -111,7 +111,7 @@ export default {
             end_date: "5/15",
             title: "問題 ⑦：106 學年度女多男少的學院？",
             explain: "（女生人數比男生多的學院）",
-            table: "/static/img/tables/table7.png",
+            table: "static/img/tables/table7.png",
             active: [
               "人文社會學院","科技管理學院","清華學院"
             ],
@@ -122,7 +122,7 @@ export default {
             end_date: "5/18",
             title: "問題 ⑧：101-105 學年度女學霸橫行的學院？",
             explain: "（女生學業表現優於男生）",
-            table: "/static/img/tables/table8.png",
+            table: "static/img/tables/table8.png",
             active: [],
             source: "",
             allactive: true,
@@ -133,7 +133,7 @@ export default {
             end_date: "5/20",
             title: "問題 ⑨：101-105 學年度會念書、更會玩！培養最多社團社長的四個學院？",
             explain: "",
-            table: "/static/img/tables/table9.png",
+            table: "static/img/tables/table9.png",
             active: [
               "工學院","人文社會學院","原子科學院","科技管理學院"
             ],

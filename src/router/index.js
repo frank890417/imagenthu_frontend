@@ -14,6 +14,7 @@ import PageTemplate from '@/components/PageTemplate'
 import SectionHohoho from '@/sections/hohoho'
 import SectionPrismatic from '@/sections/prismatic'
 import SectionMushroom from '@/sections/mushroom'
+import SectionEng82 from '@/sections/eng82'
 Vue.use(Router)
 
 let router =  new Router({
@@ -99,6 +100,10 @@ let router =  new Router({
       path: '/app/mushroom',
       name: 'SectionMushroom',
       component: SectionMushroom
+    }, {
+      path: '/app/Eng82',
+      name: 'SectionEng82',
+      component: SectionEng82
     }
   ]
 })
