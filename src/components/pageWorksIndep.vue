@@ -91,6 +91,8 @@
             
             //其他說明
             DataTheWindow(v-if="work.key=='TheWindow'")
+            //其他說明
+            DataEng82(v-if="work.key=='English82'")
             
 
   section.sub_nav
@@ -113,6 +115,7 @@ import library from '@/sections/library'
 import quasiland from '@/sections/quasiland'
 import DataPlantingLight from '@/datasection/DataPlantingLight'
 import DataTheWindow from '@/datasection/DataTheWindow'
+import DataEng82 from '@/datasection/DataEng82'
 import $ from 'jquery'
 export default {
   data(){
@@ -139,7 +142,8 @@ export default {
     library,
     quasiland,
     DataPlantingLight,
-    DataTheWindow
+    DataTheWindow,
+    DataEng82
   }
 }
 </script>

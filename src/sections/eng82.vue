@@ -105,6 +105,7 @@ export default {
         return [objcopy].concat(result).slice().sort((a,b)=>Math.random()>0.5 )
       },
       start(sd){
+        this.roundCount=0
         this.school=sd
         this.playing=true
         this.pick()
@@ -116,10 +117,12 @@ export default {
 
         let ff = function(){
           if (_this.time>0){
-            _this.socket.emit("setCounter", _this.time)
             _this.time--        
+            _this.socket.emit("setCounter", _this.time)
             setTimeout(ff,1000)
           }else{
+            _this.socket.emit("setCounter", -1) 
+            _this.socket.emit("playEng");
             _this.playing=false
           }
         }
