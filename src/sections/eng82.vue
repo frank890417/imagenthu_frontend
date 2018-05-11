@@ -9,10 +9,11 @@
           | {{sd.name}}
     .col-sm-12(v-if="playing==true")
       h2.mt-4 英文8-2
+      .time 時間: {{time}}
+      .score Score: {{score}}
       h4 {{school.name}} 同學
       h4.status {{   status    }}
       //- .btn.btn-primary(v-on:click="pick") 出題
-      span.score Score: {{score}}
       div(v-if="question", style="width: 100%")
         h1.animated.fadeIn(:key="roundCount") Q{{roundCount}}:  {{question.trans}}
         ul.list
@@ -20,7 +21,7 @@
             @click='checkAnswer(option,opid)',
             :class="{correct: status=='yes'&& option.correct, error: status=='nooo' && opid==selectedId}",
             :key="roundCount",
-            :style="{animationDelay: opid/4+'s'}") {{option.word}}
+            :style="{animationDelay: opid/5+'s'}") {{option.word}}
 </template>
 
 <script>
@@ -56,6 +57,7 @@ export default {
         lista: list,
         question: null,
         options: [],
+        time: 0,
         score: 0,
         status: "",
         selectedId: -1,
@@ -106,6 +108,22 @@ export default {
         this.school=sd
         this.playing=true
         this.pick()
+        this.time=60
+        let _this = this
+
+        this.socket.emit("selectEngSchool", this.school)
+
+
+        let ff = function(){
+          if (_this.time>0){
+            _this.socket.emit("setCounter", _this.time)
+            _this.time--        
+            setTimeout(ff,1000)
+          }else{
+            _this.playing=false
+          }
+        }
+        ff()
       },
       pick(){
         this.roundCount++
@@ -132,6 +150,7 @@ export default {
 
     mounted(){
       this.socket = io("https://awiclass.monoame.com:3030"); 
+      this.socket.emit("playEng");
       // axios.get("http://monoame.com:3000/prismatic").then(res=>{
       //   Vue.set(this,"crystals",JSON.parse(res.data))
       // })
@@ -150,6 +169,11 @@ export default {
 .section-eng82
   color: white
   padding-top: 30px
+  h1
+    font-size: 32px
+  h2
+    font-size: 24px
+
   .container .col-sm-12
     display: flex
     justify-content: center
@@ -198,19 +222,22 @@ export default {
     color: $colorOrange
     position: absolute
     right: 20px
-    top: 20px
+    top: 40px
+    display: none
+  .time
+    position: absolute
+    left: 15px
+    top: 15px
+    font-size: 24px
+    opacity: 0.5
   .score
     position: absolute
-    top: 20px
-    right: 20px
-    font-size: 40px
+    right: 15px
+    top: 15px
+    font-size: 24px
     color: $colorOrange
-    +rwd_md
-      position: absolute
-      margin: 0
-      top: -30px
-      font-size: 25px
       // top: 50px
       // right: 10px
+    
       
 </style>
