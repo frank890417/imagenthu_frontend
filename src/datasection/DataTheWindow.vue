@@ -29,7 +29,7 @@ export default {
         alldata:[
           {
             start_date: "4/28",
-            end_date: "5/1",
+            end_date: "5/2",
             title: "問題 ① ：106學年度清華大學學生人數（學士+碩+博）最多的前三個學院？",
             explain: "106 學年度下學期在學總人數統計人多氣勢強！清華前三大學院！",
             table: "static/img/tables/table1.png",
@@ -38,7 +38,7 @@ export default {
           },
           {
             start_date: "5/2",
-            end_date: "5/3",
+            end_date: "5/4",
             title: "問題 ②：106學年度清華大學學士班報到率高的人氣學院？",
             explain: "(註冊率高於校註冊率的學院)",
             table: "static/img/tables/table2.png",
@@ -54,7 +54,7 @@ export default {
           },
           {
             start_date: "5/4",
-            end_date: "5/5",
+            end_date: "5/6",
             title: "問題 ③：106學年度清華大學具多管齊下的入學管道的學院？",
             explain: "（入學管道多元的學院，學生組成包含繁星推薦、個人申請、考試分發與特殊選才等四個管道）",
             table: "static/img/tables/table3.png",
@@ -70,7 +70,7 @@ export default {
     
           {
             start_date: "5/6",
-            end_date: "5/8",
+            end_date: "5/9",
             title: "問題 ④：105學年度清華大學各學院學生最能呈現全臺區域人口縮影的學院？",
             explain: "（學生組成最接近臺灣人口分布的學院）",
             table: "static/img/tables/table4.png",
@@ -84,7 +84,7 @@ export default {
     
           {
             start_date: "5/9",
-            end_date: "5/10",
+            end_date: "5/11",
             title: "問題 ⑤：105 學年度學生來源高中數最廣泛的前三個學院？",
             explain: "",
             table: "static/img/tables/table5.png",
@@ -97,7 +97,7 @@ export default {
     
           {
             start_date: "5/11",
-            end_date: "5/12",
+            end_date: "5/14",
             title: "問題 ⑥：106 學年度下學期僑外生在學人數統計最國際化的五個學院？",
             explain: "（全校僑外生比例約5.99%）",
             table: "static/img/tables/table6.png",
@@ -107,8 +107,8 @@ export default {
             source: "資料來源：清華大學註冊組 http://registra.web.nthu.edu.tw/files/11-1086-1811.php"
           },
           {
-            start_date: "5/13",
-            end_date: "5/15",
+            start_date: "5/14",
+            end_date: "5/16",
             title: "問題 ⑦：106 學年度女多男少的學院？",
             explain: "（女生人數比男生多的學院）",
             table: "static/img/tables/table7.png",
@@ -119,7 +119,7 @@ export default {
           },
           {
             start_date: "5/16",
-            end_date: "5/18",
+            end_date: "5/19",
             title: "問題 ⑧：101-105 學年度女學霸橫行的學院？",
             explain: "（女生學業表現優於男生）",
             table: "static/img/tables/table8.png",
@@ -153,7 +153,7 @@ export default {
       return text.replace(/閃/g,"<span class='bar animated fadeIn loop'></span>")
     },
     dateInRange(st,ed){
-      if (new Date("2018/"+st) < new Date()  && new Date() < new Date("2018/"+ed) ){
+      if (new Date("2018/"+st) <= new Date()  && new Date() <= new Date("2018/"+ed) ){
         return true
       }
       return false

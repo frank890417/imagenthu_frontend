@@ -34,15 +34,16 @@ import $ from 'jquery'
 //     "timeout" : 10000, //before connect_error and connect_timeout are emitted.
 //     "transports" : ["webthis.socket"]
 // };
-
-var list = require("../data/engdata.js").default.split("\n")
+import {gre,data} from "../data/engdata.js"
+var list = data.split("\n")
 list = list.filter(item=>item.indexOf(".")!=-1)
 list =list.map(item=>item.split(" "))
 list = list.map(item=>({
   word: item[0],
-  cata: item[1],
+  // cata: item[1],
   trans: item[2]
 }))
+list=list.concat(gre)
 
 export default {
     props: {
@@ -106,6 +107,7 @@ export default {
       },
       start(sd){
         this.roundCount=0
+        this.score=0
         this.school=sd
         this.playing=true
         this.pick()
