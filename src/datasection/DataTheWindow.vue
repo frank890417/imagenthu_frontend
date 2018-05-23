@@ -130,7 +130,7 @@ export default {
           },
           {
             start_date: "5/19",
-            end_date: "5/20",
+            end_date: "6/13",
             title: "問題 ⑨：101-105 學年度會念書、更會玩！培養最多社團社長的四個學院？",
             explain: "",
             table: "static/img/tables/table9.png",

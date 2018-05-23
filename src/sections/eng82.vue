@@ -60,6 +60,7 @@ export default {
         options: [],
         time: 0,
         score: 0,
+        answered: false,
         status: "",
         selectedId: -1,
         roundCount: 0,
@@ -131,6 +132,7 @@ export default {
         ff()
       },
       pick(){
+        this.answered=false
         this.roundCount++
         this.question = this.lista[parseInt(Math.random()*this.lista.length)]
         console.log(this.question)
@@ -138,23 +140,26 @@ export default {
         console.log(this.options)
       },
       checkAnswer(option,opid){
-        this.selectedId=opid
-        if (option.correct){
-          this.status="yes"
-          this.score++
-          this.socket.emit("addEng", this.school)
-        }else{
-          this.status="nooo"
+        if (!this.answered){
+          this.answered=true
+          this.selectedId=opid
+          if (option.correct){
+            this.status="yes"
+            this.score++
+            this.socket.emit("addEng", this.school)
+          }else{
+            this.status="nooo"
+          }
+          setTimeout(()=>{
+            this.status=""
+            this.pick()
+          },1000)
         }
-        setTimeout(()=>{
-          this.status=""
-          this.pick()
-        },1000)
       }
     },
 
     mounted(){
-      this.socket = io("https://awiclass.monoame.com:3030"); 
+      this.socket = io("https://techart.cc:3030"); 
       this.socket.emit("playEng");
       // axios.get("http://monoame.com:3000/prismatic").then(res=>{
       //   Vue.set(this,"crystals",JSON.parse(res.data))
